@@ -1,1 +1,1 @@
-﻿html{height:100%;}
+﻿body,html{height:100%;}.body-content{height:100%;}.bigImg{background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;}#pic1{background-image:url('images/blur.JPG');height:100%;}#pic1 #title{position:absolute;background-color:rgba(46,46,46,.5);color:#fff;padding:10px;font-size:2em;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);}#pic2{background-image:url('images/IMG_13239.JPG');height:100%;}.other{height:500px;background-color:#2e2e2e;color:#fff;}
