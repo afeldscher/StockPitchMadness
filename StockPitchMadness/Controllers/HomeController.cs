@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using StockPitchMadness.DAL.Repositories;
+using StockPitchMadness.ViewModels;
 using System.Web.Mvc;
 
 namespace StockPitchMadness.Controllers
@@ -10,7 +8,10 @@ namespace StockPitchMadness.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(new Home()
+            {
+                Speakers = SpeakerRepositiory.GetAll()
+            });
         }
     }
 }

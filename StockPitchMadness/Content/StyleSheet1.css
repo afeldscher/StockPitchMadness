@@ -4,6 +4,7 @@ html {
 }
 .body-content {
   height: 100%;
+  padding: 0;
 }
 .navbar {
   display: none;
@@ -14,6 +15,7 @@ html {
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
   padding-left: 20px;
   padding-right: 20px;
+  cursor: pointer;
 }
 .navbar .nav-link:hover {
   color: #10acbb !important;
@@ -21,6 +23,8 @@ html {
 }
 .navbar .navbar-brand {
   width: 130px;
+  height: auto;
+  margin: 0;
   position: absolute;
   padding: 0;
 }
@@ -28,6 +32,9 @@ html {
   display: inline-block;
   width: 130px;
   margin-left: 50px;
+}
+.navbar #brandLink {
+  cursor: pointer;
 }
 .bigImg {
   /* Create the parallax scrolling effect */
@@ -39,28 +46,127 @@ html {
 #homeImage {
   background-image: url('images/blur.JPG');
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 #homeImage #homeLogo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  display: inline-block;
+  position: relative;
   height: 200px;
+}
+#homeImage #subTitle {
+  display: block;
+  font-size: 2em;
+  font-weight: 600;
+  color: #fff;
+  width: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#homeImage #date {
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+#homeImage #applyBtn {
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #383838;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 29px 3px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 6px 6px 29px 3px rgba(0, 0, 0, 0.47);
+  box-shadow: 6px 6px 29px 3px rgba(0, 0, 0, 0.47);
+  transition: 0.5s;
+}
+#homeImage #applyBtn:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  font-size: 1.5em;
+  right: -20px;
+  transition: 0.5s;
+}
+#homeImage #applyBtn:hover {
+  padding-right: 18px;
+}
+#homeImage #applyBtn:hover:after {
+  opacity: 1;
+  right: 8px;
 }
 #about {
   background-color: #10acbb;
-  height: 500px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about #aboutContent {
+  width: 60%;
+  display: inline-block;
+  text-align: justify;
+  color: #fff;
+  font-size: 1.5em;
 }
 #speakers {
+  background-color: #808080;
+}
+#speakers .speaker {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+#speakers .speaker .speakerImage {
+  margin-left: 90px;
+  height: 120px;
+  position: relative;
+}
+#speakers .speaker .speakerText {
+  display: inline-block;
+  text-align: left;
+  margin-left: 30px;
+}
+#speakers .speaker .speakerText .speakerName {
+  font-weight: bold;
+}
+#speakers .speaker .speakerText .speakerSubtitle {
+  margin-top: 0;
+}
+#schedule {
   height: 900px;
+  background-color: #10acbb;
+}
+#sponsors {
+  height: 500px;
+  background-color: #808080;
+}
+#faq {
+  height: 500px;
+  background-color: #10acbb;
+}
+#contact {
+  height: 500px;
   background-color: #808080;
 }
 .sec {
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .sec .secTitle {
-  display: inline-block;
-  font-size: 2em;
+  display: block;
+  font-size: 3em;
   color: #fff;
-  margin-top: 100px;
+  margin-bottom: 20px;
 }

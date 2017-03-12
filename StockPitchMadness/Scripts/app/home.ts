@@ -4,7 +4,6 @@ namespace Stock {
 
         public constructor() {
 
-
         }
 
         public init() {
@@ -14,12 +13,20 @@ namespace Stock {
         private hideNav() {
             $(document).scroll(function () {
                 var y = $(this).scrollTop();
-                if (y > window.innerHeight - 100) {
+                if (y > 200 /*window.innerHeight - 100*/) {
                     $('.navbar').fadeIn();
                 } else {
                     $('.navbar').fadeOut();
                 }
             });
+        }
+
+        public static scrollTo(name: string) {
+            var height: number = $(name).offset().top;
+
+            $('html, body').animate({
+                scrollTop: height - 50
+            }, 500);
         }
 
     }

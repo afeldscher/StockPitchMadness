@@ -4,6 +4,7 @@
 
 .body-content {
     height: 100%;
+    padding: 0;
 }
 
 
@@ -16,6 +17,7 @@
         transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
         padding-left: 20px;
         padding-right: 20px;
+        cursor: pointer;
 
         &:hover {
             color: #10acbb !important;
@@ -25,6 +27,8 @@
 
     .navbar-brand {
         width: 130px;
+        height: auto;
+        margin: 0;
         position: absolute;
         padding: 0;
     }
@@ -33,6 +37,10 @@
         display: inline-block;
         width: 130px;
         margin-left: 50px;
+    }
+
+    #brandLink {
+        cursor: pointer;
     }
 }
 
@@ -48,33 +56,151 @@
 #homeImage {
     background-image: url('images/blur.JPG');
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     #homeLogo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        display: inline-block;
+        position: relative;
         height: 200px;
+    }
+
+    #subTitle {
+        display: block;
+        font-size: 2em;
+        font-weight: 600;
+        color: #fff;
+        width: 350px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #date {
+        color: #fff;
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+
+    #applyBtn {
+        margin-top: 40px;
+        display: flex;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 50px;
+        font-size: 1.5em;
+        color: #fff;
+        background-color: #383838;
+        cursor: pointer;
+        -webkit-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+        -moz-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+        box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+        transition: 0.5s;
+
+
+        &:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            font-size: 1.5em;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+
+        &:hover {
+            padding-right: 18px;
+
+            &:after {
+                opacity: 1;
+                right: 8px;
+            }
+        }
     }
 }
 
 #about {
     background-color: #10acbb;
-    height: 500px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #aboutContent {
+        width: 60%;
+        display: inline-block;
+        text-align: justify;
+        color: #fff;
+        font-size: 1.5em;
+    }
 }
 
 #speakers {
+    background-color: #808080;
+
+    .speaker {
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+
+        .speakerImage {
+            margin-left: 90px;
+            height: 120px;
+            position: relative;
+        }
+
+        .speakerText {
+            display: inline-block;
+            text-align: left;
+            margin-left: 30px;
+
+            .speakerName {
+                font-weight: bold;
+            }
+
+            .speakerSubtitle {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+#schedule {
     height: 900px;
+    background-color: #10acbb;
+}
+
+#sponsors {
+    height: 500px;
     background-color: #808080;
 }
 
+#faq {
+    height: 500px;
+    background-color: #10acbb;
+}
+
+#contact {
+    height: 500px;
+    background-color: #808080;
+}
+
+
 .sec {
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .secTitle {
-        display: inline-block;
-        font-size: 2em;
+        display: block;
+        font-size: 3em;
         color: #fff;
-        margin-top: 100px;
+        margin-bottom: 20px;
     }
 }

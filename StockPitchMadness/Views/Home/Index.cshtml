@@ -1,20 +1,48 @@
-﻿@{
+﻿@model StockPitchMadness.ViewModels.Home
+
+@{
     ViewBag.Title = "Stock Pitch Madness";
 }
 
 
 <div id="homeImage" class="bigImg">
-    <img id="homeLogo" src="~/Content/images/logoTmp.jpg" />
+    <div>
+        <img id="homeLogo" src="~/Content/images/logoTmp.jpg" />
+        <span id="subTitle">
+            The premier student lead stock pitch competition.
+        </span>
+        <spam id="date">
+            OCTOBER 28-29, 2017
+        </spam>
+        <div id="applyBtn">
+            Apply Now
+        </div>
+    </div>
 </div>
 
 <div class="sec" id="about">
-    <span class="secTitle">About</span>
+    @Html.Partial("AboutPartial")
 </div>
 
 <div class="sec" id="speakers">
-    <span class="secTitle">Speakers</span>
+    @Html.Partial("SpeakersPartial", Model.Speakers)
 </div>
 
+<div class="sec" id="schedule">
+    @Html.Partial("SchedulePartial")
+</div>
+
+<div class="sec" id="sponsors">
+    @Html.Partial("SponsorsPartial")
+</div>
+
+<div class="sec" id="faq">
+    @Html.Partial("FAQPartial")
+</div>
+
+<div class="sec" id="contact">
+    @Html.Partial("ContactPartial")
+</div>
 
 
 @section scripts {

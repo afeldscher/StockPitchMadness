@@ -1,0 +1,14 @@
+﻿@model List<StockPitchMadness.Models.Speaker>
+
+<span class="secTitle">Speakers</span>
+
+<div class="container">
+    <div class="row">
+        @foreach (var speaker in Model)
+        {
+            <div class="col-md-6 col-sm-12">
+                @Html.Partial("SpeakerPartial", speaker)
+            </div>
+        }
+    </div>
+</div>
