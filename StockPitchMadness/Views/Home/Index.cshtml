@@ -1,16 +1,27 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Stock Pitch Madness";
 }
 
-<div class="bigImg" id="pic1">
-    <span id="title">
-        Stock Pitch Madness
-    </span>
+
+<div id="homeImage" class="bigImg">
+    <img id="homeLogo" src="~/Content/images/logoTmp.jpg" />
 </div>
 
-<div class="other"> stuff</div>
+<div class="sec" id="about">
+    <span class="secTitle">About</span>
+</div>
 
-<div class="bigImg" id="pic2"></div>
+<div class="sec" id="speakers">
+    <span class="secTitle">Speakers</span>
+</div>
 
-<div class="other">stuff again</div>
 
+
+@section scripts {
+    <script>
+        var home = new Stock.Home();
+        home.init();
+
+    </script>
+
+}

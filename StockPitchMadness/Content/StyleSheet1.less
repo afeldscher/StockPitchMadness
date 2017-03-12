@@ -6,6 +6,37 @@
     height: 100%;
 }
 
+
+.navbar {
+    display: none;
+
+    .nav-link {
+        font-size: 1.3em;
+        color: #fff !important;
+        transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:hover {
+            color: #10acbb !important;
+            background-color: #000000 !important;
+        }
+    }
+
+    .navbar-brand {
+        width: 130px;
+        position: absolute;
+        padding: 0;
+    }
+
+    #brandLinkContainer {
+        display: inline-block;
+        width: 130px;
+        margin-left: 50px;
+    }
+}
+
+
 .bigImg {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -14,30 +45,36 @@
     background-size: cover;
 }
 
-#pic1 {
+#homeImage {
     background-image: url('images/blur.JPG');
     height: 100%;
 
-    #title {
+    #homeLogo {
         position: absolute;
-        background-color: rgba(46, 46, 46, 0.5);
-        color: #fff;
-        padding: 10px;
-        font-size: 2em;
-        top:50%;
-        left:50%;
+        top: 50%;
+        left: 50%;
         transform: translateX(-50%) translateY(-50%);
-
+        height: 200px;
     }
 }
 
-#pic2 {
-    background-image: url('images/IMG_13239.JPG');
-    height: 100%;
+#about {
+    background-color: #10acbb;
+    height: 500px;
 }
 
-.other {
-    height: 500px;
-    background-color: rgb(46, 46, 46);
-    color: #fff;
+#speakers {
+    height: 900px;
+    background-color: #808080;
+}
+
+.sec {
+    text-align: center;
+
+    .secTitle {
+        display: inline-block;
+        font-size: 2em;
+        color: #fff;
+        margin-top: 100px;
+    }
 }
