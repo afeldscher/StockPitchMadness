@@ -16,6 +16,7 @@ html {
   padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+  text-align: right;
 }
 .navbar .nav-link:hover {
   color: #10acbb !important;
@@ -27,6 +28,7 @@ html {
   margin: 0;
   position: absolute;
   padding: 0;
+  z-index: 100;
 }
 .navbar #brandLinkContainer {
   display: inline-block;

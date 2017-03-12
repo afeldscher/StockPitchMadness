@@ -18,7 +18,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div id="brandLinkContainer">
-                    <a id="brandLink" onclick="Stock.Home.scrollTo('#homeImage');" >  @*href="@Url.Action("Index", "Home")"*@
+                    <a id="brandLink" onclick="Stock.Home.scrollTo('#homeImage');">
+                        @*href="@Url.Action("Index", "Home")"*@
                         <img class="navbar-brand" src="~/Content/images/logoTmp.jpg" />
                     </a>
                 </div>
@@ -38,7 +39,7 @@
     <div class="container-fluid body-content">
         @RenderBody()
     </div>
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/custom")

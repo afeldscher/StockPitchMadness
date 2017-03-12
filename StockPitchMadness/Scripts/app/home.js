@@ -6,6 +6,7 @@ var Stock;
         }
         Home.prototype.init = function () {
             this.hideNav();
+            this.mobileMenuHide();
         };
         Home.prototype.hideNav = function () {
             $(document).scroll(function () {
@@ -15,6 +16,20 @@ var Stock;
                 }
                 else {
                     $('.navbar').fadeOut();
+                }
+            });
+        };
+        Home.prototype.mobileMenuHide = function () {
+            $("body").click(function (event) {
+                // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called 
+                if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible")) {
+                    $('.navbar-collapse').collapse('toggle');
+                }
+            });
+            $(".nav-link").click(function (event) {
+                // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called 
+                if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible")) {
+                    $('.navbar-collapse').collapse('toggle');
                 }
             });
         };
