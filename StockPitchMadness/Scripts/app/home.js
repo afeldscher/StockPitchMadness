@@ -10,7 +10,7 @@ var Stock;
         Home.prototype.hideNav = function () {
             $(document).scroll(function () {
                 var y = $(this).scrollTop();
-                if (y > window.innerHeight) {
+                if (y > window.innerHeight - 100) {
                     $('.navbar').fadeIn();
                 }
                 else {
@@ -22,4 +22,3 @@ var Stock;
     }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
-//# sourceMappingURL=home.js.map

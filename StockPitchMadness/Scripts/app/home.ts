@@ -14,7 +14,7 @@ namespace Stock {
         private hideNav() {
             $(document).scroll(function () {
                 var y = $(this).scrollTop();
-                if (y > window.innerHeight) {
+                if (y > window.innerHeight - 100) {
                     $('.navbar').fadeIn();
                 } else {
                     $('.navbar').fadeOut();
