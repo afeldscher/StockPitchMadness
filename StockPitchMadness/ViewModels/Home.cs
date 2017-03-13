@@ -9,5 +9,6 @@ namespace StockPitchMadness.ViewModels
     public class Home
     {
         public List<Speaker> Speakers { get; set; }
+        public List<string> Sponsors { get; set; }
     }
 }

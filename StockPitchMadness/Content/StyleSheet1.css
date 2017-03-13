@@ -149,9 +149,22 @@ html {
   height: 900px;
   background-color: #10acbb;
 }
+#map {
+  width: 200px;
+  height: 200px;
+}
 #sponsors {
-  height: 500px;
   background-color: #808080;
+}
+#sponsors .sponsor {
+  margin-bottom: 20px;
+}
+#sponsors .sponsor img {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+  transition: all ease-in-out 0.3s;
+}
+#sponsors .sponsor img:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 #faq {
   height: 500px;

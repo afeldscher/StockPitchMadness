@@ -1,5 +1,6 @@
 ﻿using StockPitchMadness.DAL.Repositories;
 using StockPitchMadness.ViewModels;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace StockPitchMadness.Controllers
@@ -10,7 +11,8 @@ namespace StockPitchMadness.Controllers
         {
             return View(new Home()
             {
-                Speakers = SpeakerRepositiory.GetAll()
+                Speakers = SpeakerRepositiory.GetAll(),
+                Sponsors = new List<string>( new string[] { "sponsor1.png", "sponsor1.png", "sponsor1.png", "sponsor1.png" })
             });
         }
     }

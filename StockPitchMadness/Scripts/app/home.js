@@ -39,6 +39,8 @@ var Stock;
                 scrollTop: height - 50
             }, 500);
         };
+        Home.initMap = function () {
+        };
         return Home;
     }());
     Stock.Home = Home;

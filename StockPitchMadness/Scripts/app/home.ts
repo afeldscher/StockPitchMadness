@@ -47,5 +47,10 @@ namespace Stock {
             }, 500);
         }
 
+        public static initMap() {
+
+        }
+
+
     }
 }

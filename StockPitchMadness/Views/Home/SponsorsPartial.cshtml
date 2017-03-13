@@ -1,2 +1,14 @@
-﻿<span class="secTitle">Sponsors</span>
+﻿@model List<string>
 
+<span class="secTitle">Sponsors</span>
+
+<div class="container">
+    <div class="row">
+        @foreach (var sponsorPic in Model)
+        {
+            <div class="col-lg-6 sponsor">
+                <img src="~/Content/images/sponsors/@sponsorPic" />
+            </div>
+        }
+    </div>
+</div>
