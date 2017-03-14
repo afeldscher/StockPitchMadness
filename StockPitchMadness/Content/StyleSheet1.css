@@ -113,7 +113,7 @@ html {
   background-size: cover;
 }
 #homeImage {
-  background-image: url('images/BackgroundImageFull.png');
+  background-image: url('images/BackgroundImage1080.png');
   height: 100%;
   display: flex;
   justify-content: center;
