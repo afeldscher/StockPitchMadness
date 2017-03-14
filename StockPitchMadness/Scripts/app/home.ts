@@ -1,9 +1,13 @@
 ﻿/// <reference path="../typings/jquery/jquery.d.ts" />
 namespace Stock {
     export class Home {
+        private FAQ_URL: string;
+        private faqLoaded: boolean;
+        private faqOpened: boolean;
+        private faqData: JQuery;
 
-        public constructor() {
-
+        public constructor(faqUrl: string) {
+            this.FAQ_URL = faqUrl;
         }
 
         public init() {
@@ -51,7 +55,32 @@ namespace Stock {
         }
 
         public viewMoreFAQ() {
-            $("#viewMoreFAQ").hide();
+            var _this = this;
+
+            if (this.faqOpened) { //close
+                _this.faqData.slideUp(600);
+                this.faqOpened = false;
+                $('#viewMoreFAQ').html("View More");
+
+
+            } else if (!this.faqLoaded) { //not loaded and closed
+                var promise = DAL.getMoreFAQ(this.FAQ_URL);
+
+                promise.done(function (data) {
+                    _this.faqOpened = true;
+                    _this.faqLoaded = true;
+
+                    _this.faqData = $(data).hide();
+                    $('.questionsContainer').append(_this.faqData);
+                    _this.faqData.slideDown(600);
+                    $('#viewMoreFAQ').html("View Less");
+
+                });
+            } else { //loaded and closed
+                _this.faqData.slideDown(600);
+                this.faqOpened = true;
+                $('#viewMoreFAQ').html("View Less");
+            }
         }
 
     }

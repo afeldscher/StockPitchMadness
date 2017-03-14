@@ -13,15 +13,15 @@ namespace StockPitchMadness.Controllers
             return View(new Home()
             {
                 Speakers = SpeakerRepositiory.GetAll(),
-                Sponsors = new List<string>( new string[] { "sponsor1.png", "sponsor1.png", "sponsor1.png", "sponsor1.png" }),
+                Sponsors = new List<string>(new string[] { "sponsor1.png", "sponsor1.png", "sponsor1.png", "sponsor1.png" }),
                 Schedules = ScheduleRepository.GetAll(),
                 Questions = FAQRepository.Get(0, 4)
             });
         }
 
-        public JsonResult RestQuestions()
+        public ActionResult RestQuestions()
         {
-            return Json(FAQRepository.Get(4));
+            return PartialView("QuestionsPartial", FAQRepository.Get(4));
         }
     }
 }

@@ -2,7 +2,8 @@
 var Stock;
 (function (Stock) {
     var Home = (function () {
-        function Home() {
+        function Home(faqUrl) {
+            this.FAQ_URL = faqUrl;
         }
         Home.prototype.init = function () {
             var _this = this;
@@ -44,7 +45,28 @@ var Stock;
             }, 500);
         };
         Home.prototype.viewMoreFAQ = function () {
-            $("#viewMoreFAQ").hide();
+            var _this = this;
+            if (this.faqOpened) {
+                _this.faqData.slideUp(600);
+                this.faqOpened = false;
+                $('#viewMoreFAQ').html("View More");
+            }
+            else if (!this.faqLoaded) {
+                var promise = Stock.DAL.getMoreFAQ(this.FAQ_URL);
+                promise.done(function (data) {
+                    _this.faqOpened = true;
+                    _this.faqLoaded = true;
+                    _this.faqData = $(data).hide();
+                    $('.questionsContainer').append(_this.faqData);
+                    _this.faqData.slideDown(600);
+                    $('#viewMoreFAQ').html("View Less");
+                });
+            }
+            else {
+                _this.faqData.slideDown(600);
+                this.faqOpened = true;
+                $('#viewMoreFAQ').html("View Less");
+            }
         };
         return Home;
     }());

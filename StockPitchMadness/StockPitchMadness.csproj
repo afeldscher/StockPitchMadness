@@ -149,8 +149,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\blur.JPG" />
-    <Content Include="Content\images\IMG_13239.JPG" />
+    <Content Include="Content\images\BackgroundImageFull.png" />
     <Content Include="Content\images\Logo_200.png" />
     <Content Include="Content\images\Logo_90.png" />
     <Content Include="Content\images\speakers\speaker1.PNG" />
@@ -183,6 +182,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\Montserrat-Bold.ttf" />
+    <Content Include="fonts\Montserrat-Medium.ttf" />
+    <Content Include="fonts\Montserrat-SemiBold.ttf" />
+    <Content Include="fonts\Roboto-Bold.ttf" />
+    <Content Include="fonts\Roboto-BoldItalic.ttf" />
+    <Content Include="fonts\Roboto-Italic.ttf" />
+    <Content Include="fonts\Roboto-Regular.ttf" />
     <None Include="Properties\PublishProfiles\myasp.net.pubxml">
       <SubType>Designer</SubType>
     </None>
@@ -237,6 +243,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\DAL.ts" />
     <TypeScriptCompile Include="Scripts\app\home.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\google.maps.d.ts" />

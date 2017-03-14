@@ -47,9 +47,45 @@
 
 @section scripts {
     <script>
-        var home = new Stock.Home();
+        var home = new Stock.Home('@Url.Action("RestQuestions", "Home")');
         home.init();
-
     </script>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvO3M3ofJNmyyfEzkxOhyW7Mat8dOcQZY&callback=initMap"
+        async defer> </script>
+
+<script>
+        function initMap() {
+            var map;
+            var latlng = new google.maps.LatLng(39.955213, -75.188198)
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: latlng,
+                zoom: 18,
+                scrollwheel: false
+            });
+
+            var marker = new google.maps.Marker({ // Set the marker
+                position: latlng, // Position marker to coordinates
+                map: map, // assign the market to our map variable
+                title: 'LeBow College of Business' // Marker ALT Text
+            });
+
+            var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
+                content: '<b>LeBow College of Business</b><br>\
+                          3220 Market St<br>\
+                          Philadelphia, PA 19104<br>\
+                          <a target="_blank" href="https://maps.google.com/maps?ll=39.955213,-75.188198&z=18&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=3657902883847509630">\
+                          View on Google Maps</a>'
+            });
+
+            google.maps.event.addListener(marker, 'click', function () { // Add a Click Listener to our marker
+                infowindow.open(map, marker); // Open our InfoWindow
+            });
+
+        }
+</script>
 
 }

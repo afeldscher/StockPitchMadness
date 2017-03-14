@@ -25,7 +25,8 @@ namespace StockPitchMadness
 
 
             bundles.Add(new ScriptBundle("~/bundles/custom").Include(
-                      "~/Scripts/app/home.js"));
+                      "~/Scripts/app/home.js",
+                      "~/Scripts/app/DAL.js"));
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
