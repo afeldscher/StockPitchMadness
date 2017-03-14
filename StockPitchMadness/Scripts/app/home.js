@@ -5,8 +5,12 @@ var Stock;
         function Home() {
         }
         Home.prototype.init = function () {
-            this.hideNav();
-            this.mobileMenuHide();
+            var _this = this;
+            $(document).ready(function () {
+                //this.hideNav();
+                _this.mobileMenuHide();
+                $("#viewMoreFAQ").click(function () { _this.viewMoreFAQ(); });
+            });
         };
         Home.prototype.hideNav = function () {
             $(document).scroll(function () {
@@ -39,10 +43,10 @@ var Stock;
                 scrollTop: height - 50
             }, 500);
         };
-        Home.initMap = function () {
+        Home.prototype.viewMoreFAQ = function () {
+            $("#viewMoreFAQ").hide();
         };
         return Home;
     }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
-//# sourceMappingURL=home.js.map

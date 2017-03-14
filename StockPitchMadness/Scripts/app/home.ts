@@ -7,8 +7,11 @@ namespace Stock {
         }
 
         public init() {
-            this.hideNav();
-            this.mobileMenuHide();
+            $(document).ready(() => {
+                //this.hideNav();
+                this.mobileMenuHide();
+                $("#viewMoreFAQ").click(() => { this.viewMoreFAQ(); });
+            });
         }
 
         private hideNav() {
@@ -47,10 +50,9 @@ namespace Stock {
             }, 500);
         }
 
-        public static initMap() {
-
+        public viewMoreFAQ() {
+            $("#viewMoreFAQ").hide();
         }
-
 
     }
 }

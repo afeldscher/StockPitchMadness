@@ -1,2 +1,11 @@
-﻿<span class="secTitle">FAQ</span>
+﻿@model List<StockPitchMadness.Models.Question>
 
+<span class="secTitle">FAQ</span>
+
+<div class="container questionsContainer">
+    @Html.Partial("QuestionsPartial", Model)
+</div>
+
+<div id="viewMoreFAQ" class="btn">
+    View More
+</div>

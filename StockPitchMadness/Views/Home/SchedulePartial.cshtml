@@ -1,4 +1,27 @@
-﻿<span class="secTitle">Schedule</span>
+﻿@model List<StockPitchMadness.Models.Schedule>
+<span class="secTitle">Schedule</span>
 
-<!--
-<div id="map"></div> -->
+
+<div class="container">
+    <div class="row schedule">
+        @foreach (var schedule in Model)
+        {
+            <div class="col-md-6">
+                <h2>@schedule.Date</h2>
+                @foreach (var Event in schedule.Events)
+                {
+                    <div class="row vertAlign">
+                        <div class="col-xs-5 time">
+                            @Event.Time
+                        </div>
+                        <div class="col-xs-7 description">
+                            @Event.Description
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+    </div>
+</div>
+

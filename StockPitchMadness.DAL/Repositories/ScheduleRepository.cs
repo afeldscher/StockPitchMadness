@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using StockPitchMadness.Models;
 using System;
 using System.Collections.Generic;
@@ -10,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace StockPitchMadness.DAL.Repositories
 {
-    public static class SpeakerRepositiory
+    public static class ScheduleRepository
     {
-        public static List<Speaker> GetAll()
+        public static List<Schedule> GetAll()
         {
-            string filePath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\Speakers.json";
+            string filePath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\Schedule.json";
 
             using (StreamReader file = File.OpenText(filePath))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                return (List<Speaker>)serializer.Deserialize(file, typeof(List<Speaker>));
+                return (List<Schedule>)serializer.Deserialize(file, typeof(List<Schedule>));
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿body, html {
+﻿@darkBlue: #21294f;
+
+body, html {
     height: 100%;
 }
 
@@ -9,7 +11,9 @@
 
 
 .navbar {
-    display: none;
+    //display: none;
+    background-color: @darkBlue;
+    border: 0;
 
     .nav-link {
         font-size: 1.3em;
@@ -27,9 +31,10 @@
         }
     }
 
+
     .navbar-brand {
-        width: 130px;
         height: auto;
+        width: auto;
         margin: 0;
         position: absolute;
         padding: 0;
@@ -88,45 +93,50 @@
 
     #applyBtn {
         margin-top: 40px;
-        display: flex;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 50px;
-        font-size: 1.5em;
-        color: #fff;
-        background-color: #383838;
-        cursor: pointer;
-        -webkit-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
-        -moz-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
-        box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
-        transition: 0.5s;
+    }
+}
 
+.btn {
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #383838;
+    cursor: pointer;
+    -webkit-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+    -moz-box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+    box-shadow: 6px 6px 29px 3px rgba(0,0,0,0.47);
+    transition: 0.5s;
+
+
+    &:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        font-size: 1.5em;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+
+    &:hover {
+        padding-right: 30px;
+        color: #fff;
 
         &:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            font-size: 1.5em;
-            right: -20px;
-            transition: 0.5s;
-        }
-
-
-        &:hover {
-            padding-right: 18px;
-
-            &:after {
-                opacity: 1;
-                right: 8px;
-            }
+            opacity: 1;
+            right: 8px;
         }
     }
 }
+
 
 #about {
     background-color: #10acbb;
@@ -175,14 +185,37 @@
 }
 
 #schedule {
-    height: 900px;
     background-color: #10acbb;
+    text-align: center;
+
+    .schedule {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    .vertAlign {
+        display: flex;
+        align-content: center;
+    }
+
+    .time {
+        text-align: right;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .description {
+        text-align: left;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+    }
 }
 
-#map {
-    width: 200px;
-    height: 200px;
-}
+
 
 #sponsors {
     background-color: #808080;
@@ -202,13 +235,36 @@
 }
 
 #faq {
-    height: 500px;
     background-color: #10acbb;
+    transition: all 1s;
+
+    .questionTxt {
+        display: block;
+        text-align: left;
+        font-size: 1.6em;
+        font-weight: 800;
+    }
+
+    .answerTxt {
+        display: block;
+        text-align: left;
+        font-size: 1.4em;
+        padding-right: 50px;
+    }
+
+    .questionContainer {
+        margin-bottom: 50px;
+    }
 }
 
 #contact {
-    height: 500px;
     background-color: #808080;
+
+    #map {
+        width: 60%;
+        height: 400px;
+        display: inline-block;
+    }
 }
 
 

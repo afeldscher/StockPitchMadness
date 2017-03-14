@@ -7,14 +7,14 @@
 
 <div id="homeImage" class="bigImg">
     <div>
-        <img id="homeLogo" src="~/Content/images/logoTmp.jpg" />
+        <img id="homeLogo" src="~/Content/images/Logo_200.png" />
         <span id="subTitle">
             The premier student lead stock pitch competition.
         </span>
         <spam id="date">
             OCTOBER 28-29, 2017
         </spam>
-        <div id="applyBtn">
+        <div id="applyBtn" class="btn">
             Apply Now
         </div>
     </div>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="sec" id="schedule">
-    @Html.Partial("SchedulePartial")
+    @Html.Partial("SchedulePartial", Model.Schedules)
 </div>
 
 <div class="sec" id="sponsors">
@@ -37,7 +37,7 @@
 </div>
 
 <div class="sec" id="faq">
-    @Html.Partial("FAQPartial")
+    @Html.Partial("FAQPartial", Model.Questions)
 </div>
 
 <div class="sec" id="contact">
