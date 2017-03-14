@@ -72,3 +72,4 @@ var Stock;
     }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
+//# sourceMappingURL=home.js.map

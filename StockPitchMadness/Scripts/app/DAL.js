@@ -15,3 +15,4 @@ var Stock;
     }());
     Stock.DAL = DAL;
 })(Stock || (Stock = {}));
+//# sourceMappingURL=DAL.js.map
