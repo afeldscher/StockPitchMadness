@@ -113,7 +113,7 @@ html {
   background-size: cover;
 }
 #homeImage {
-  background-image: url('images/BackgroundImagehalf.png');
+  background-image: url('images/BackgroundImagequarter.png');
   height: 100%;
   display: flex;
   justify-content: center;
