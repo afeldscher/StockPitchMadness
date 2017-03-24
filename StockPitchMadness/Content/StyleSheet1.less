@@ -100,19 +100,37 @@ body, html {
     background-color: @darkBlue;
     border: 0;
 
+    #navContainer {
+        position: relative;
+    }
+
     .nav-link {
         color: #fff !important;
         transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
         padding-left: 20px;
         padding-right: 20px;
         cursor: pointer;
-        text-align: right;
+        text-align: center;
         .Montserrat-SemiBold;
         font-size: 1.1em;
 
         &:hover {
             color: @yellow !important;
             background-color: #0D1A33 !important;
+        }
+    }
+
+
+
+    .navbar-toggle {
+        margin-left: 15px;
+        float: left;
+    }
+
+    .navbar-collapse {
+        //display: inline-block !important;
+        @media (min-width: 991px) { //767
+            padding-left: 125px;
         }
     }
 
@@ -125,14 +143,36 @@ body, html {
         z-index: 100;
     }
 
+
     #brandLinkContainer {
-        display: inline-block;
         width: 130px;
+        position: absolute;
         margin-left: 50px;
+        margin-top: 10px;
+        height: 50px;
+
+        #brandLink {
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) { //767
+            display: none;
+        }
     }
 
-    #brandLink {
-        cursor: pointer;
+
+
+
+    #socialIconContainer {
+        position: absolute;
+        display: inline-block;
+        top: 12px;
+        right: 10px;
+        padding: inherit;
+
+        .socialIcon {
+            padding-left: 10px;
+        }
     }
 }
 
@@ -148,10 +188,12 @@ body, html {
 #homeImage {
     background-image: url('images/BackgroundImagequarter.png');
     height: 100%;
+    min-height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 
     #homeLogo {
         display: inline-block;
@@ -177,6 +219,18 @@ body, html {
 
     #applyBtn {
         margin-top: 40px;
+    }
+
+    #downArrow {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+        img {
+            width: 30px;
+        }
     }
 }
 
@@ -214,7 +268,6 @@ body, html {
     justify-content: center;
 
     #aboutContent {
-        width: 60%;
         display: inline-block;
         text-align: justify;
         color: #000;

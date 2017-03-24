@@ -42,7 +42,7 @@ var Stock;
             var height = $(name).offset().top;
             $('html, body').animate({
                 scrollTop: height - 50
-            }, 500);
+            }, Math.sqrt(Math.abs(window.scrollY - height)) * 30);
         };
         Home.prototype.viewMoreFAQ = function () {
             var _this = this;
@@ -72,4 +72,3 @@ var Stock;
     }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
-//# sourceMappingURL=home.js.map

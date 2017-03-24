@@ -73,13 +73,16 @@ html {
   background-color: #14294f;
   border: 0;
 }
+.navbar #navContainer {
+  position: relative;
+}
 .navbar .nav-link {
   color: #fff !important;
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
   padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
-  text-align: right;
+  text-align: center;
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-weight: normal;
@@ -88,6 +91,15 @@ html {
 .navbar .nav-link:hover {
   color: #f7c811 !important;
   background-color: #0D1A33 !important;
+}
+.navbar .navbar-toggle {
+  margin-left: 15px;
+  float: left;
+}
+@media (min-width: 991px) {
+  .navbar .navbar-collapse {
+    padding-left: 125px;
+  }
 }
 .navbar .navbar-brand {
   height: auto;
@@ -98,12 +110,29 @@ html {
   z-index: 100;
 }
 .navbar #brandLinkContainer {
-  display: inline-block;
   width: 130px;
+  position: absolute;
   margin-left: 50px;
+  margin-top: 10px;
+  height: 50px;
 }
-.navbar #brandLink {
+.navbar #brandLinkContainer #brandLink {
   cursor: pointer;
+}
+@media (max-width: 991px) {
+  .navbar #brandLinkContainer {
+    display: none;
+  }
+}
+.navbar #socialIconContainer {
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  right: 10px;
+  padding: inherit;
+}
+.navbar #socialIconContainer .socialIcon {
+  padding-left: 10px;
 }
 .bigImg {
   /* Create the parallax scrolling effect */
@@ -115,10 +144,12 @@ html {
 #homeImage {
   background-image: url('images/BackgroundImagequarter.png');
   height: 100%;
+  min-height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 #homeImage #homeLogo {
   display: inline-block;
@@ -145,6 +176,16 @@ html {
 }
 #homeImage #applyBtn {
   margin-top: 40px;
+}
+#homeImage #downArrow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+#homeImage #downArrow img {
+  width: 30px;
 }
 .btn {
   display: flex;
@@ -179,7 +220,6 @@ html {
   justify-content: center;
 }
 #about #aboutContent {
-  width: 60%;
   display: inline-block;
   text-align: justify;
   color: #000;

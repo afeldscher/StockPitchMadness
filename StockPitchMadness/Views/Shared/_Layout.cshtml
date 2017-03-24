@@ -10,20 +10,21 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" id="navContainer">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div id="brandLinkContainer">
-                    <a id="brandLink" onclick="Stock.Home.scrollTo('#homeImage');">
-                        @*href="@Url.Action("Index", "Home")"*@
-                        <img class="navbar-brand" src="~/Content/images/Logo_90.png" />
-                    </a>
-                </div>
             </div>
+
+            <div id="brandLinkContainer">
+                <a id="brandLink" onclick="Stock.Home.scrollTo('#homeImage');">
+                    <img class="navbar-brand" src="~/Content/images/Logo_90.png" />
+                </a>
+            </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a class="nav-link" onclick="Stock.Home.scrollTo('#about');">About</a></li>
@@ -33,6 +34,11 @@
                     <li><a class="nav-link" onclick="Stock.Home.scrollTo('#faq');">FAQ</a></li>
                     <li><a class="nav-link" onclick="Stock.Home.scrollTo('#contact');">Contact</a></li>
                 </ul>
+            </div>
+            <div id="socialIconContainer">
+                <img src="~/Content/images/Facebook.svg" class="socialIcon" />
+                <img src="~/Content/images/Twitter.svg" class="socialIcon" />
+                <img src="~/Content/images/Instagram.svg" class="socialIcon" />
             </div>
         </div>
     </div>

@@ -51,7 +51,10 @@ namespace Stock {
 
             $('html, body').animate({
                 scrollTop: height - 50
-            }, 500);
+            },
+                Math.sqrt(Math.abs(window.scrollY - height)) * 30
+
+            );
         }
 
         public viewMoreFAQ() {

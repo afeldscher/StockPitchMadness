@@ -18,6 +18,9 @@
             Apply Now
         </div>
     </div>
+    <div id="downArrow" onclick="Stock.Home.scrollTo('#about');">
+        <img src="~/Content/images/Arrow.png" />
+    </div>
 </div>
 
 <div class="sec" id="about">
@@ -53,11 +56,11 @@
 
 
 
+    @*
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvO3M3ofJNmyyfEzkxOhyW7Mat8dOcQZY&callback=initMap"
+                async defer> </script>*@
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvO3M3ofJNmyyfEzkxOhyW7Mat8dOcQZY&callback=initMap"
-        async defer> </script>
-
-<script>
+    <script>
         function initMap() {
             var map;
             var latlng = new google.maps.LatLng(39.955213, -75.188198)
@@ -86,6 +89,6 @@
             });
 
         }
-</script>
+    </script>
 
 }

@@ -149,13 +149,18 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\Arrow.png" />
     <Content Include="Content\images\BackgroundImageFull.png" />
     <Content Include="Content\images\BackgroundImagehalf.png" />
     <Content Include="Content\images\BackgroundImagequarter.png" />
+    <Content Include="Content\images\Facebook.svg" />
+    <Content Include="Content\images\Instagram.svg" />
+    <Content Include="Content\images\LebowImage.png" />
     <Content Include="Content\images\Logo_200.png" />
     <Content Include="Content\images\Logo_90.png" />
     <Content Include="Content\images\speakers\speaker1.PNG" />
     <Content Include="Content\images\sponsors\sponsor1.PNG" />
+    <Content Include="Content\images\Twitter.svg" />
     <Content Include="Content\StyleSheet1.css">
       <DependentUpon>StyleSheet1.less</DependentUpon>
     </Content>
