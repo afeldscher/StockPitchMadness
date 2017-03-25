@@ -46,6 +46,9 @@
 <div class="sec" id="contact">
     @Html.Partial("ContactPartial")
 </div>
+<div id="footer">
+    <img id="footerLogo" src="~/Content/images/Logo_200.png" />
+</div>
 
 
 @section scripts {
@@ -56,9 +59,9 @@
 
 
 
-    @*
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvO3M3ofJNmyyfEzkxOhyW7Mat8dOcQZY&callback=initMap"
-                async defer> </script>*@
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvO3M3ofJNmyyfEzkxOhyW7Mat8dOcQZY&callback=initMap"
+            async defer> </script>
 
     <script>
         function initMap() {

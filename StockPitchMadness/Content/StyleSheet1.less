@@ -129,13 +129,15 @@ body, html {
 
     .navbar-collapse {
         //display: inline-block !important;
+        //font-size: 1.1em;
+
         @media (min-width: 991px) { //767
             padding-left: 125px;
         }
     }
 
     .navbar-brand {
-        height: auto;
+        height: 80px;
         width: auto;
         margin: 0;
         position: absolute;
@@ -170,8 +172,21 @@ body, html {
         right: 10px;
         padding: inherit;
 
+        .group {
+            display: inline-block;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
         .socialIcon {
-            padding-left: 10px;
+            position: relative;
+            z-index: 150;
+        }
+
+        .socialIcony {
+            position: absolute;
+            z-index: 151;
+            opacity: 0;
         }
     }
 }
@@ -278,13 +293,21 @@ body, html {
 #speakers {
     background-color: @yellow;
 
+    .speakerCol {
+        position: relative;
+    }
+
     .speaker {
         display: flex;
         align-items: center;
         padding-bottom: 30px;
+        width: 410px;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
 
         .speakerImage {
-            margin-left: 90px;
+            //margin-left: 90px;
             height: 120px;
             position: relative;
         }
@@ -308,7 +331,8 @@ body, html {
 }
 
 #schedule {
-    background-color: @lightBlue;
+    .bigImg;
+    background-image: url('images/LebowImagequarter.png');
     color: @white;
     text-align: center;
 
@@ -321,8 +345,7 @@ body, html {
     }
 
     h2 {
-        text-align: left;
-        padding-left: 135px; //TODO: Fix left align
+        text-align: center;
         .Robot-BoldItalic;
         margin-bottom: 30px;
     }
@@ -399,10 +422,15 @@ body, html {
 #contact {
     background-color: @white;
 
+    #mapContainer {
+        position: relative;
+    }
+
     #map {
-        width: 60%;
         height: 400px;
-        display: inline-block;
+        border: solid 20px;
+        border-radius: 2px;
+        border-color: #f6f5f4;
     }
 }
 
@@ -419,5 +447,17 @@ body, html {
         font-size: 2.5em;
         margin-bottom: 20px;
         .Montserrat-SemiBold;
+    }
+}
+
+
+#footer {
+    background-color: @darkBlue;
+    height: 200px;
+
+    #footerLogo {
+        height: 100px;
+        margin-top: 40px;
+        margin-left: 100px;
     }
 }

@@ -6,7 +6,7 @@
     <div class="row">
         @foreach (var speaker in Model)
         {
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-offset-1 col-lg-5 col-sm-12 speakerCol" >
                 @Html.Partial("SpeakerPartial", speaker)
             </div>
         }

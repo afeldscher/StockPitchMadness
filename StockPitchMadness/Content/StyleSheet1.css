@@ -102,7 +102,7 @@ html {
   }
 }
 .navbar .navbar-brand {
-  height: auto;
+  height: 80px;
   width: auto;
   margin: 0;
   position: absolute;
@@ -131,8 +131,19 @@ html {
   right: 10px;
   padding: inherit;
 }
+.navbar #socialIconContainer .group {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
 .navbar #socialIconContainer .socialIcon {
-  padding-left: 10px;
+  position: relative;
+  z-index: 150;
+}
+.navbar #socialIconContainer .socialIcony {
+  position: absolute;
+  z-index: 151;
+  opacity: 0;
 }
 .bigImg {
   /* Create the parallax scrolling effect */
@@ -228,13 +239,19 @@ html {
 #speakers {
   background-color: #f7c811;
 }
+#speakers .speakerCol {
+  position: relative;
+}
 #speakers .speaker {
   display: flex;
   align-items: center;
   padding-bottom: 30px;
+  width: 410px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
 }
 #speakers .speaker .speakerImage {
-  margin-left: 90px;
   height: 120px;
   position: relative;
 }
@@ -256,7 +273,12 @@ html {
   font-weight: normal;
 }
 #schedule {
-  background-color: #28519c;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/LebowImagequarter.png');
   color: #fff;
   text-align: center;
 }
@@ -267,8 +289,7 @@ html {
   margin-bottom: 20px;
 }
 #schedule h2 {
-  text-align: left;
-  padding-left: 135px;
+  text-align: center;
   font-family: Roboto-BoldItalic;
   font-style: normal;
   font-weight: normal;
@@ -339,10 +360,14 @@ html {
 #contact {
   background-color: #fff;
 }
+#contact #mapContainer {
+  position: relative;
+}
 #contact #map {
-  width: 60%;
   height: 400px;
-  display: inline-block;
+  border: solid 20px;
+  border-radius: 2px;
+  border-color: #f6f5f4;
 }
 .sec {
   text-align: center;
@@ -360,4 +385,13 @@ html {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-weight: normal;
+}
+#footer {
+  background-color: #14294f;
+  height: 200px;
+}
+#footer #footerLogo {
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 100px;
 }
