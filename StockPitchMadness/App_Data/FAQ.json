@@ -1,30 +1,70 @@
 ﻿[
   {
-    "Q": "Lorem ipsum dolor sit amet?1",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "What is Stock Pitch Madness?",
+    "A": "The goal of Stock Pitch Madness is to have 96 to 128 teams from across the country compete for cash prizes. Stock Pitch Madness requires teams of (3) students. You must identify a single team captain and a team name. Teams will apply for one out of the four sectors. The four sectors are: Consumer Retail, Energy, Healthcare, and Technology. Teams will receive a letter of acceptance with their sector. The team will then research two stocks within that sector finding one stock to buy and another stock to short. Wall Street bankers and college professors will be judging the quality of each of the competing teams’ investment theses, how detailed their analyses are, and the quality of their presentations. The competition will be utilizing the bracket system, which will be broken up into each sector for teams to compete."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?2",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "Who can Attend?",
+    "A": "All undergraduate students whose apart of a team that consists of three members will be able to participate in Stock Pitch Madness."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?3",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "What about Team Sizes?",
+    "A": "You’re required to have three people on a team."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?4",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "Why, then, do you need my resume?",
+    "A": "All students that are participating in Stock Pitch Madness are required to submit their resume so that they can be passed on to sponsoring companies for recruitment."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?5",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "What should I Wear?",
+    "A": "During the competition, you are required to wear business professional clothing which means suit, dress shirt, tie, and dress shoes."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?6",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+    "Q": "How much is this going to cost me?",
+    "A": "Stock Pitch Madness is completely free, including food, drinks, and awesome gear."
   },
   {
-    "Q": "Lorem ipsum dolor sit amet?7",
-    "A": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
-  }
+    "Q": "How do I get there?",
+    "A": "Start booking your way of travel ASAP. The longer you wait the more expensive traveling costs will be. We’re working on getting travel reimbursements and buses set-up for you! Based on the amount of sponsoring we receive, we will try to give as must reimbursements as possible, so once we receive all the sponsoring we can attain we will contact each team leader about the reimbursements and how to go about receiving them. We can’t guarantee reimbursements for everyone but we will work our hardest for everyone to receive one."
+  },
+  {
+    "Q": "How will reimbursements work?",
+    "A": "We'll have a page where you can submit your required travel reimbursement forms and receipts. For each location teams are coming from, we determine the cheapest reasonable option and set a reimbursement cap at a bit more than the cost of that option. We will reimburse all travel costs up to this cap—if you go over, we'll still reimburse the amount of the cap, but no more. "
+  },
+  {
+    "Q": "Where will I Stay?",
+    "A": "We will work with the Drexel community in hosting students at their apartment and dorm rooms so that lodging will be free. There is also a choice of hotels near Drexel that is within walking distance."
+  },
+  {
+    "Q": "What should I bring?",
+    "A": "Your valid student ID, laptop, phone, chargers, sleeping equipment, and lots of excitement."
+  },
+  {
+    "Q": "What shouldn’t I bring?",
+    "A": "Weapons or anything that can be construed as a weapon, alcohol, illegal drugs, animals. Use your common sense - if you wouldn't bring it on a plane or to school, don't bring it here."
+  },
+  {
+    "Q": "What's the Application Process Like?",
+    "A": "Each team will nominate a team leader whose is to register his/her team and will complete the short answer questions on behalf of their team. If a team is representing a student organization each team member must make sure to say “yes” in the application and to list the name of that organization. As team leader, you are required to make sure your team members also register themselves individually, using the same team name so that we may have the required information on your teammates."
+  },
+  {
+    "Q": "When Will Applications Close?",
+    "A": "Applications to register your team will close at the end of May. Team members must register by the end of May. Each team should have their three stocks chosen and researched by Friday, October 13 th , 2017 in which you will submit your presentation by email to spmdrexel@gmail.com with the subject line: (name of school) Presentation (ex. Drexel Presentation). You must use Microsoft PowerPoint for each presentation and must be saved as your school name with the recommendation (ex. Drexel_Buy, Drexel_Short) when sending it via email."
+  },
+  {
+    "Q": "When/Where can I Pitch?",
+    "A": "Stock Pitch Madness will start with the kick-off ceremony Saturday morning. A detailed schedule of events and locations will be posted closer to the event. There will be events taking place throughout the day as the competition proceeds."
+  },
+  {
+    "Q": "What Can I Win?",
+    "A": "A (combination of…)panel of wall street professionals and professors will judge the competition and will select the best pitches based on the following criteria: investment thesis, technical difficulty, analysis, and presentation. Top prizes are TBA, but will involve thousands of dollars and hopefully perks from company sponsors."
+  },
+  {
+    "Q": "I have a question that's not answered here!",
+    "A": "We’re here for you! Send us an email at contact@spmdrexel.com"
+  },
+  {
+    "Q": "How Is Stock Pitch Madness Run?",
+    "A": "Stock Pitch Madness is planned entirely by two Drexel University students, with some advice and assistance from our friends at the Finance department of Lebow College of Business. One hundred percent of the funding for Stock Pitch Madness will come from corporate sponsor donations. You can find more information about sponsoring at our sponsor section. What if I am not Participating in the Competition? For students not taking part in the competition you may not attend the competition or events except students from Drexel and University of Pennsylvania which are only allowed to take part in the workshops and seminars."
+  },
 ]

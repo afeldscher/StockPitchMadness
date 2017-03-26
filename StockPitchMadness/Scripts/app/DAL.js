@@ -12,6 +12,6 @@ var Stock;
             return promise;
         };
         return DAL;
-    }());
+    })();
     Stock.DAL = DAL;
 })(Stock || (Stock = {}));

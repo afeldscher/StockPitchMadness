@@ -150,6 +150,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\Arrow.png" />
+    <Content Include="Content\images\BackgroundImagecomp.jpg" />
     <Content Include="Content\images\BackgroundImageFull.png" />
     <Content Include="Content\images\BackgroundImagehalf.png" />
     <Content Include="Content\images\BackgroundImagequarter.png" />
@@ -158,6 +159,7 @@
     <Content Include="Content\images\Instagram.svg" />
     <Content Include="Content\images\Instagramy.svg" />
     <Content Include="Content\images\LebowImage.png" />
+    <Content Include="Content\images\LebowImagecomp.jpg" />
     <Content Include="Content\images\LebowImagequarter.png" />
     <Content Include="Content\images\Logo_200.png" />
     <Content Include="Content\images\Logo_90.png" />
@@ -175,8 +177,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\StyleSheet1.less" />
     <Content Include="App_Data\Speakers.json" />
     <Content Include="App_Data\Schedule.json" />
@@ -185,6 +185,13 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="fonts\Montserrat-Bold.ttf" />
+    <Content Include="fonts\Montserrat-Medium.ttf" />
+    <Content Include="fonts\Montserrat-SemiBold.ttf" />
+    <Content Include="fonts\Roboto-Bold.ttf" />
+    <Content Include="fonts\Roboto-BoldItalic.ttf" />
+    <Content Include="fonts\Roboto-Italic.ttf" />
+    <Content Include="fonts\Roboto-Regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -193,18 +200,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="fonts\Montserrat-Bold.ttf" />
-    <Content Include="fonts\Montserrat-Medium.ttf" />
-    <Content Include="fonts\Montserrat-SemiBold.ttf" />
-    <Content Include="fonts\Roboto-Bold.ttf" />
-    <Content Include="fonts\Roboto-BoldItalic.ttf" />
-    <Content Include="fonts\Roboto-Italic.ttf" />
-    <Content Include="fonts\Roboto-Regular.ttf" />
     <None Include="Properties\PublishProfiles\myasp.net.pubxml">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />

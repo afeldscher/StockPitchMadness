@@ -153,7 +153,7 @@ html {
   background-size: cover;
 }
 #homeImage {
-  background-image: url('images/BackgroundImagequarter.png');
+  background-image: url('images/BackgroundImagecomp.jpg');
   height: 100%;
   min-height: 550px;
   display: flex;
@@ -230,11 +230,19 @@ html {
   align-items: center;
   justify-content: center;
 }
-#about #aboutContent {
+#about h2 {
+  font-family: Roboto-Bold;
+  font-style: normal;
+  font-weight: normal;
+  color: #000;
+  font-size: 2em;
+}
+#about .aboutContent {
   display: inline-block;
   text-align: justify;
   color: #000;
   font-size: 1.5em;
+  text-indent: 50px;
 }
 #speakers {
   background-color: #f7c811;
@@ -278,7 +286,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('images/LebowImagequarter.png');
+  background-image: url('images/LebowImagecomp.jpg');
   color: #fff;
   text-align: center;
 }
@@ -333,6 +341,20 @@ html {
   background-color: #28519c;
   color: #fff;
   transition: all 1s;
+  /*
+    .row {
+        -moz-column-width: 30em;
+        -webkit-column-width: 30em;
+        -moz-column-gap: 1em;
+        -webkit-column-gap: 1em;
+        
+    }
+
+    .row > div {
+        display: inline-block;
+        padding: .5rem;
+        width: 100%;
+    } */
 }
 #faq .secTitle {
   color: #fff;
@@ -349,13 +371,15 @@ html {
   display: block;
   text-align: left;
   font-size: 1.4em;
-  padding-right: 50px;
+  text-indent: 50px;
   font-family: Roboto-Regular;
   font-style: normal;
   font-weight: normal;
+  text-align: justify;
 }
 #faq .questionContainer {
   margin-bottom: 50px;
+  padding-right: 20px;
 }
 #contact {
   background-color: #fff;

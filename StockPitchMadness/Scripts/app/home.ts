@@ -98,5 +98,11 @@ namespace Stock {
 
         }
 
+        private masonry() {
+            var m = new Masonry($('.grid').get()[0], {
+                itemSelector: ".thumbnail"
+            });
+        }
+
     }
 }

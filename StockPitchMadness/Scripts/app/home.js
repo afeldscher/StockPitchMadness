@@ -10,6 +10,7 @@ var Stock;
             $(document).ready(function () {
                 //this.hideNav();
                 _this.mobileMenuHide();
+                _this.socialIcons();
                 $("#viewMoreFAQ").click(function () { _this.viewMoreFAQ(); });
             });
         };
@@ -68,7 +69,21 @@ var Stock;
                 $('#viewMoreFAQ').html("View Less");
             }
         };
+        Home.prototype.socialIcons = function () {
+            $('.socialIcony').hover(function (e) {
+                $(e.target).fadeTo(400, 1);
+                $('#' + e.target.id + '.socialIcon').fadeTo(400, 0);
+            }, function (e) {
+                $(e.target).fadeTo(400, 0);
+                $('#' + e.target.id + '.socialIcon').fadeTo(400, 1);
+            });
+        };
+        Home.prototype.masonry = function () {
+            var m = new Masonry($('.grid').get()[0], {
+                itemSelector: ".thumbnail"
+            });
+        };
         return Home;
-    }());
+    })();
     Stock.Home = Home;
 })(Stock || (Stock = {}));
