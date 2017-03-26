@@ -78,12 +78,8 @@ var Stock;
                 $('#' + e.target.id + '.socialIcon').fadeTo(400, 1);
             });
         };
-        Home.prototype.masonry = function () {
-            var m = new Masonry($('.grid').get()[0], {
-                itemSelector: ".thumbnail"
-            });
-        };
         return Home;
     })();
     Stock.Home = Home;
 })(Stock || (Stock = {}));
+//# sourceMappingURL=home.js.map
