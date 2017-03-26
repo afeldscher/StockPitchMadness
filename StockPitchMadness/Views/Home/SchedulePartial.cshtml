@@ -11,11 +11,14 @@
                 @foreach (var Event in schedule.Events)
                 {
                     <div class="row vertAlign">
-                        <div class="col-xs-4 time">
+                        <div class="col-xs-5 time">
                             @Event.Time
                         </div>
-                        <div class="col-xs-8 description">
+                        <div class="col-xs-5 description">
                             @Event.Description
+                        </div>
+                        <div class="col-xs-2 location">
+                            @Event.Location
                         </div>
                     </div>
                 }

@@ -41,9 +41,10 @@ var Stock;
         };
         Home.scrollTo = function (name) {
             var height = $(name).offset().top;
-            $('html, body').animate({
+            var winHeight = window.scrollY || document.documentElement.scrollTop;
+            $('body, html').animate({
                 scrollTop: height - 50
-            }, Math.sqrt(Math.abs(window.scrollY - height)) * 30);
+            }, (Math.sqrt(Math.abs(winHeight - height)) * 30));
         };
         Home.prototype.viewMoreFAQ = function () {
             var _this = this;
@@ -71,15 +72,15 @@ var Stock;
         };
         Home.prototype.socialIcons = function () {
             $('.socialIcony').hover(function (e) {
-                $(e.target).fadeTo(400, 1);
-                $('#' + e.target.id + '.socialIcon').fadeTo(400, 0);
+                $(e.target).fadeTo(300, 1);
+                $('#' + e.target.id + '.socialIcon').fadeTo(300, 0);
             }, function (e) {
-                $(e.target).fadeTo(400, 0);
-                $('#' + e.target.id + '.socialIcon').fadeTo(400, 1);
+                $(e.target).fadeTo(300, 0);
+                $('#' + e.target.id + '.socialIcon').fadeTo(300, 1);
             });
         };
         return Home;
-    })();
+    }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
 //# sourceMappingURL=home.js.map

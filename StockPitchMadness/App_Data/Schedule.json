@@ -1,75 +1,111 @@
 ﻿[
   {
-    "Date": "19 Feb 2017",
+    "Date": "Saturday",
     "Events": [
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "8am to 9am ",
+        "Description": "Breakfast",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "8am to 9am ",
+        "Description": "Registration ",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "9am to 10:30am ",
+        "Description": "Opening Ceremony ",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "11am to 1pm ",
+        "Description": "First Round Begins",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "1pm to 2pm",
+        "Description": "Lunch",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "2:15pm to 3:30pm ",
+        "Description": "Second Round Begins",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "3:30pm to 4:00pm",
+        "Description": "Break ",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "4:15pm to 5:30pm",
+        "Description": "Third Round Begins",
+        "Location": "TDB"
+      },
+      {
+        "Time": "5:30pm to 6:30pm ",
+        "Description": "Dinner ",
+        "Location": "TDB"
+      },
+      {
+        "Time": "6:45pm to 8pm ",
+        "Description": "Fourth Round Begins",
+        "Location": "TDB"
+      },
+      {
+        "Time": "8pm ",
+        "Description": "Competition Ends",
+        "Location": "TDB"
+      },
+      {
+        "Time": "8pm to 9:30pm ",
+        "Description": "Networking Party ",
+        "Location": "TDB"
       }
     ]
   },
   {
-    "Date": "20 Feb 2017",
+    "Date": "Sunday",
     "Events": [
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "9am to 10:30am ",
+        "Description": "Breakfast",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "11am to 12:15pm",
+        "Description": "Sector Championship Begins",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "12:15pm to 1:15pm",
+        "Description": "Lunch ",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "1:30pm to 2:45pm",
+        "Description": "Final Four Round Begins",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "2:45pm to 3:15pm ",
+        "Description": "Break ",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "3:30pm to 4:10pm ",
+        "Description": "Championship Round",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "4:30pm to 5:30pm",
+        "Description": "Closing Ceremony",
+        "Location": "TDB"
       },
       {
-        "Time": "8:45 AM",
-        "Description": "Lorem ipsum dolor sit amet, consectetur"
+        "Time": "5:30pm",
+        "Description": "Competition Ends",
+        "Location": "TDB"
       }
     ]
   }

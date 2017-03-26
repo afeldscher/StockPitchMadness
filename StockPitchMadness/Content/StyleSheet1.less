@@ -277,9 +277,6 @@ body, html {
 #about {
     background-color: @white;
     min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     h2 {
         .Roboto-Bold;
@@ -375,6 +372,12 @@ body, html {
         align-items: center;
         margin-bottom: 20px;
     }
+
+    .location {
+        text-align: left;
+        font-size: 1.3em;
+        .Roboto-Regular;
+    }
 }
 
 
@@ -424,22 +427,25 @@ body, html {
     .questionContainer {
         margin-bottom: 50px;
         padding-right: 20px;
+        display: inline-block;
+        break-inside: avoid-column;
     }
 
-    /*
+
     .row {
         -moz-column-width: 30em;
         -webkit-column-width: 30em;
+        column-width: 30em;
         -moz-column-gap: 1em;
         -webkit-column-gap: 1em;
-        
+        column-gap: 1em;
     }
 
     .row > div {
         display: inline-block;
         padding: .5rem;
         width: 100%;
-    } */
+    }
 }
 
 #contact {

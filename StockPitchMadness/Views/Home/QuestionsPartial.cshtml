@@ -1,15 +1,17 @@
 ﻿@model List<StockPitchMadness.Models.Question>
 
-<div class="row">
-    @foreach (var question in Model)
-    {
-        <div class="col-md-6 questionContainer">
-            <span class="questionTxt">
-                @question.Q
-            </span>
-            <span class="answerTxt">
-                @question.A
-            </span>
-        </div>
-    }
+<div>
+    <div class="row">
+        @foreach (var question in Model)
+        {
+            <div class="col-md-6 questionContainer">
+                <span class="questionTxt">
+                    @question.Q
+                </span>
+                <span class="answerTxt">
+                    @question.A
+                </span>
+            </div>
+        }
+    </div>
 </div>
