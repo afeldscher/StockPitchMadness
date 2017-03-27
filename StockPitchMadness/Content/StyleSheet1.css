@@ -88,6 +88,13 @@ html {
   font-weight: normal;
   font-size: 1.1em;
 }
+@media (max-width: 767px) {
+  .navbar .nav-link {
+    font-size: 1.3em !important;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+  }
+}
 .navbar .nav-link:hover {
   color: #f7c811 !important;
   background-color: #0D1A33 !important;
@@ -95,6 +102,19 @@ html {
 .navbar .navbar-toggle {
   margin-left: 15px;
   float: left;
+  border: 0;
+  margin-top: 15px;
+}
+.navbar .navbar-toggle span {
+  background-color: #fff;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 3px;
+  display: block;
+}
+.navbar .navbar-toggle:focus,
+.navbar .navbar-toggle:hover {
+  background-color: transparent;
 }
 @media (min-width: 991px) {
   .navbar .navbar-collapse {
@@ -133,7 +153,7 @@ html {
 }
 .navbar #socialIconContainer .group {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 15px;
   cursor: pointer;
 }
 .navbar #socialIconContainer .socialIcon {
@@ -144,6 +164,59 @@ html {
   position: absolute;
   z-index: 151;
   opacity: 0;
+}
+.navbar-toggle * {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.navbar-toggle {
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 0px;
+  border: none;
+}
+.navbar-toggle span.bar1,
+.navbar-toggle span.bar2,
+.navbar-toggle span.bar3,
+.navbar-toggle span.bar4 {
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+  width: 20px;
+}
+.navbar-toggle.collapsed span.bar1 {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -ms-transform-origin: 1px 3px;
+  -webkit-transform-origin: 1px 3px;
+  -moz-transform-origin: 1px 3px;
+  -o-transform-origin: 1px 3px;
+  transform-origin: 1px 3px;
+  width: 24px;
+}
+.navbar-toggle.collapsed span.bar2 {
+  -ms-transform: rotate(-360deg) scale(0);
+  -webkit-transform: rotate(-360deg) scale(0);
+  -moz-transform: rotate(-360deg) scale(0);
+  -o-transform: rotate(-360deg) scale(0);
+  transform: rotate(-360deg) scale(0);
+}
+.navbar-toggle.collapsed span.bar3 {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -ms-transform-origin: 9px 2px;
+  -webkit-transform-origin: 9px 2px;
+  transform-origin: 9px 2px;
+  width: 24px;
 }
 .bigImg {
   /* Create the parallax scrolling effect */
@@ -286,6 +359,7 @@ html {
   background-image: url('images/LebowImagecomp.jpg');
   color: #fff;
   text-align: center;
+  min-height: 100%;
 }
 #schedule .secTitle {
   color: #fff;

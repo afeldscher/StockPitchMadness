@@ -114,6 +114,12 @@ body, html {
         .Montserrat-SemiBold;
         font-size: 1.1em;
 
+        @media (max-width: 767px) {
+            font-size: 1.3em !important;
+            padding-top: 0.7em;
+            padding-bottom: 0.7em;
+        }
+
         &:hover {
             color: @yellow !important;
             background-color: #0D1A33 !important;
@@ -125,7 +131,25 @@ body, html {
     .navbar-toggle {
         margin-left: 15px;
         float: left;
+        border: 0;
+        margin-top: 15px;
+
+        span {
+            background-color: @white;
+            width: 20px;
+            height: 2px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+        }
     }
+
+
+
 
     .navbar-collapse {
         //display: inline-block !important;
@@ -173,7 +197,7 @@ body, html {
 
         .group {
             display: inline-block;
-            margin-left: 10px;
+            margin-left: 15px;
             cursor: pointer;
         }
 
@@ -189,6 +213,74 @@ body, html {
         }
     }
 }
+
+
+//---------NAV Effect--------------
+
+.navbar-toggle * {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navbar-toggle {
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 0px;
+    border: none;
+
+    span.bar1,
+    span.bar2,
+    span.bar3,
+    span.bar4 {
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        width: 20px;
+    }
+}
+
+.navbar-toggle.collapsed {
+    span.bar1 {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -ms-transform-origin: 1px 3px;
+        -webkit-transform-origin: 1px 3px;
+        -moz-transform-origin: 1px 3px;
+        -o-transform-origin: 1px 3px;
+        transform-origin: 1px 3px;
+        width: 24px;
+    }
+
+    span.bar2 {
+        -ms-transform: rotate(-360deg) scale(0);
+        -webkit-transform: rotate(-360deg) scale(0);
+        -moz-transform: rotate(-360deg) scale(0);
+        -o-transform: rotate(-360deg) scale(0);
+        transform: rotate(-360deg) scale(0);
+    }
+
+    span.bar3 {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -ms-transform-origin: 9px 2px;
+        -webkit-transform-origin: 9px 2px;
+        transform-origin: 9px 2px;
+        width: 24px;
+    }
+}
+
+//-------------END Nav Effect-----------
+
+
 
 
 .bigImg {
@@ -338,6 +430,7 @@ body, html {
     background-image: url('images/LebowImagecomp.jpg');
     color: @white;
     text-align: center;
+    min-height: 100%;
 
     .secTitle {
         color: #fff;

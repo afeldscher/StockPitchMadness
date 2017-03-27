@@ -11,6 +11,7 @@ var Stock;
                 //this.hideNav();
                 _this.mobileMenuHide();
                 _this.socialIcons();
+                _this.navToggleAnimation();
                 $("#viewMoreFAQ").click(function () { _this.viewMoreFAQ(); });
             });
         };
@@ -77,6 +78,16 @@ var Stock;
             }, function (e) {
                 $(e.target).fadeTo(300, 0);
                 $('#' + e.target.id + '.socialIcon').fadeTo(300, 1);
+            });
+        };
+        Home.prototype.navToggleAnimation = function () {
+            $('.navbar-toggle').click(function () {
+                if ($(this).hasClass('collapsed')) {
+                    $(this).removeClass('collapsed');
+                }
+                else {
+                    $(this).addClass('collapsed');
+                }
             });
         };
         return Home;

@@ -15,6 +15,7 @@ namespace Stock {
                 //this.hideNav();
                 this.mobileMenuHide();
                 this.socialIcons();
+                this.navToggleAnimation();
                 $("#viewMoreFAQ").click(() => { this.viewMoreFAQ(); });
             });
         }
@@ -97,6 +98,16 @@ namespace Stock {
                 $('#' + e.target.id + '.socialIcon').fadeTo(300, 1);
             });
 
+        }
+
+        private navToggleAnimation() {
+            $('.navbar-toggle').click(function () {
+                if ($(this).hasClass('collapsed')) {
+                    $(this).removeClass('collapsed');
+                } else {
+                    $(this).addClass('collapsed');
+                }
+            });
         }
     }
 }
