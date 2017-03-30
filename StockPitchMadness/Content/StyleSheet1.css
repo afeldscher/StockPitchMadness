@@ -327,6 +327,7 @@ html {
   position: relative;
   transform: translateX(-50%);
   left: 50%;
+  max-width: 412px;
 }
 #speakers .speaker .speakerImage {
   height: 120px;
