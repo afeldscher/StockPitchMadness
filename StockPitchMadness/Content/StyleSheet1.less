@@ -111,7 +111,12 @@ body, html {
     #navContainer {
         position: relative;
 
-        @media (min-width: 767px) {
+        @media (max-width: 991px) {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        @media (min-width: 991px) {
             padding-right: 100px !important;
         }
     }
@@ -450,6 +455,21 @@ body, html {
     text-align: center;
     min-height: 100%;
 
+
+    .scheduleRow {
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: all ease-in-out 0.2s;
+
+
+        &.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
     .secTitle {
         color: #fff;
     }
@@ -492,6 +512,21 @@ body, html {
 }
 
 
+.animate-Zoom {
+    &.animation-element {
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: all ease-in-out 0.2s;
+
+        &.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
 
 #sponsors {
     background-color: @white;
@@ -528,11 +563,22 @@ body, html {
     }
 }
 
-
 #challenge {
     background-color: @yellow;
     color: #000;
     min-height: 400px;
+
+    p {
+        text-align: left;
+        .Roboto-Regular;
+        font-size: 1.4em;
+        color: #000;
+    }
+
+    h3 {
+        .Roboto-Bold;
+        font-size: 2em;
+    }
 }
 
 #faq {
@@ -606,6 +652,13 @@ body, html {
 
 
 .sec {
+    opacity: 0.2;
+    transition: all ease-in-out 0.3s;
+
+    &.in-view {
+        opacity: 1;
+    }
+
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -637,7 +690,7 @@ body, html {
         padding-top: 5px;
         color: @white;
         .Roboto-Regular;
-        display:block;
+        display: block;
     }
 
     #mapContainer {
@@ -646,13 +699,27 @@ body, html {
     }
 
     #map {
+        margin: auto;
         height: 160px;
-        //max-width: 400px;
+        max-width: 350px;
     }
 
     .footerLogo {
         max-height: 100px;
         max-width: 100%;
-        margin-top: 30px;
+        display: inline-block;
+        //margin-top: 30px;
+    }
+
+    .footerImgContainer {
+        margin-top: 40px;
+        max-width: 250px;
+        //width: 250px;
+        //height: 200px;
+    }
+
+    #lebowLogo {
+        margin-top: 40px;
+        //max-width: 250px;
     }
 }

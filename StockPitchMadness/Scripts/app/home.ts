@@ -15,6 +15,7 @@ namespace Stock {
                 this.mobileMenuHide();
                 this.socialIcons();
                 this.navToggleAnimation();
+                this.pageAnimations();
                 $("#viewMoreFAQ").click(() => { this.viewMoreFAQ(); });
             });
         }
@@ -57,6 +58,7 @@ namespace Stock {
                 _this.faqData.slideUp(600);
                 this.faqOpened = false;
                 $('#viewMoreFAQ').html("View More");
+                Home.$animation_elements = $('.animation-element');
 
 
             } else if (!this.faqLoaded) { //not loaded and closed
@@ -70,12 +72,14 @@ namespace Stock {
                     $('.questionsContainer').append(_this.faqData);
                     _this.faqData.slideDown(600);
                     $('#viewMoreFAQ').html("View Less");
+                    Home.$animation_elements = $('.animation-element');
 
                 });
             } else { //loaded and closed
                 _this.faqData.slideDown(600);
                 this.faqOpened = true;
                 $('#viewMoreFAQ').html("View Less");
+                Home.$animation_elements = $('.animation-element');
             }
         }
 
@@ -94,11 +98,49 @@ namespace Stock {
                 var state = $('.navbar-collapse').attr('aria-expanded');
 
                 if (state || state == undefined) {
-                        $(this).addClass('collapsed');
+                    $(this).addClass('collapsed');
                 } else {
                     $(this).removeClass('collapsed');
                 }
             });
         }
+
+        private static $animation_elements;
+
+        private pageAnimations() {
+            var $window = $(window);
+            $window.on('scroll', check_if_in_view);
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+            Home.$animation_elements = $('.animation-element');
+            var _this = this;
+
+
+            function check_if_in_view() {
+                var window_height = $window.height() - 50;
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                $.each(Home.$animation_elements, function () {
+                    var $element = $(this);
+                    var element_height = $element.outerHeight();
+                    var element_top_position = $element.offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is within viewport
+                    if ((element_bottom_position * .95 >= window_top_position) &&
+                        (element_top_position <= window_bottom_position)) {
+                        $element.addClass('in-view');
+                    } else {
+                        $element.removeClass('in-view');
+                    }
+                });
+            }
+
+
+
+        }
+
+
     }
 }

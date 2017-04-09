@@ -84,7 +84,13 @@ html {
 .navbar #navContainer {
   position: relative;
 }
-@media (min-width: 767px) {
+@media (max-width: 991px) {
+  .navbar #navContainer {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media (min-width: 991px) {
   .navbar #navContainer {
     padding-right: 100px !important;
   }
@@ -380,6 +386,17 @@ html {
   text-align: center;
   min-height: 100%;
 }
+#schedule .scheduleRow {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: all ease-in-out 0.2s;
+}
+#schedule .scheduleRow.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
 #schedule .secTitle {
   color: #fff;
 }
@@ -421,6 +438,17 @@ html {
   font-style: normal;
   font-weight: normal;
 }
+.animate-Zoom.animation-element {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: all ease-in-out 0.2s;
+}
+.animate-Zoom.animation-element.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
 #sponsors {
   background-color: #fff;
   font-size: 1.4em;
@@ -454,6 +482,20 @@ html {
   background-color: #f7c811;
   color: #000;
   min-height: 400px;
+}
+#challenge p {
+  text-align: left;
+  font-family: Roboto-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4em;
+  color: #000;
+}
+#challenge h3 {
+  font-family: Roboto-Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
 }
 #faq {
   background-color: #28519c;
@@ -521,6 +563,8 @@ html {
   border-color: #f6f5f4;
 }
 .sec {
+  opacity: 0.2;
+  transition: all ease-in-out 0.3s;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -528,6 +572,9 @@ html {
   font-style: normal;
   font-weight: normal;
   color: #000;
+}
+.sec.in-view {
+  opacity: 1;
 }
 .sec h1 {
   font-family: Roboto-Bold;
@@ -562,10 +609,19 @@ html {
   padding-bottom: 30px;
 }
 #footer #map {
+  margin: auto;
   height: 160px;
+  max-width: 350px;
 }
 #footer .footerLogo {
   max-height: 100px;
   max-width: 100%;
-  margin-top: 30px;
+  display: inline-block;
+}
+#footer .footerImgContainer {
+  margin-top: 40px;
+  max-width: 250px;
+}
+#footer #lebowLogo {
+  margin-top: 40px;
 }

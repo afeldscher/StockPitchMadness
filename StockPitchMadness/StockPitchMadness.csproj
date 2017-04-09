@@ -161,6 +161,8 @@
     <Content Include="Content\images\Facebooky.svg" />
     <Content Include="Content\images\Instagram.svg" />
     <Content Include="Content\images\Instagramy.svg" />
+    <Content Include="Content\images\lebow-all-white-primary-eps.svg" />
+    <Content Include="Content\images\lebow-all-white-primary.png" />
     <Content Include="Content\images\LebowImage.png" />
     <Content Include="Content\images\LebowImagecomp.jpg" />
     <Content Include="Content\images\LebowImagequarter.png" />
