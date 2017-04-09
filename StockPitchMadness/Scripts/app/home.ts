@@ -12,22 +12,10 @@ namespace Stock {
 
         public init() {
             $(document).ready(() => {
-                //this.hideNav();
                 this.mobileMenuHide();
                 this.socialIcons();
                 this.navToggleAnimation();
                 $("#viewMoreFAQ").click(() => { this.viewMoreFAQ(); });
-            });
-        }
-
-        private hideNav() {
-            $(document).scroll(function () {
-                var y = $(this).scrollTop();
-                if (y > 200 /*window.innerHeight - 100*/) {
-                    $('.navbar').fadeIn();
-                } else {
-                    $('.navbar').fadeOut();
-                }
             });
         }
 
@@ -36,6 +24,7 @@ namespace Stock {
                 // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called 
                 if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible")) {
                     (<any>$('.navbar-collapse')).collapse('toggle');
+                    $('.navbar-toggle').removeClass('collapsed');
                 }
             });
 
@@ -43,6 +32,7 @@ namespace Stock {
                 // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called 
                 if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible")) {
                     (<any>$('.navbar-collapse')).collapse('toggle');
+                    $('.navbar-toggle').removeClass('collapsed');
                 }
             });
         }
@@ -97,15 +87,16 @@ namespace Stock {
                 $(e.target).fadeTo(300, 0);
                 $('#' + e.target.id + '.socialIcon').fadeTo(300, 1);
             });
-
         }
 
         private navToggleAnimation() {
             $('.navbar-toggle').click(function () {
-                if ($(this).hasClass('collapsed')) {
-                    $(this).removeClass('collapsed');
+                var state = $('.navbar-collapse').attr('aria-expanded');
+
+                if (state || state == undefined) {
+                        $(this).addClass('collapsed');
                 } else {
-                    $(this).addClass('collapsed');
+                    $(this).removeClass('collapsed');
                 }
             });
         }

@@ -8,6 +8,7 @@ namespace StockPitchMadness.Controllers
 {
     public class HomeController : Controller
     {
+        private const int NUM_FAQ = 4;
         public ActionResult Index()
         {
             return View(new Home()
@@ -15,13 +16,13 @@ namespace StockPitchMadness.Controllers
                 Speakers = SpeakerRepositiory.GetAll(),
                 Sponsors = new List<string>(new string[] { "sponsor1.png", "sponsor1.png", "sponsor1.png", "sponsor1.png" }),
                 Schedules = ScheduleRepository.GetAll(),
-                Questions = FAQRepository.Get(0, 4)
+                Questions = FAQRepository.Get(0, NUM_FAQ)
             });
         }
 
         public ActionResult RestQuestions()
         {
-            return PartialView("QuestionsPartial", FAQRepository.Get(4));
+            return PartialView("QuestionsPartial", FAQRepository.Get(NUM_FAQ));
         }
     }
 }

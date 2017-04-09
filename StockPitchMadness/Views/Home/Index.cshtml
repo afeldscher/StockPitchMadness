@@ -12,11 +12,13 @@
             The premier student lead stock pitch competition.
         </span>
         <spam id="date">
-            OCTOBER 28-29, 2017
+            February 17-18, 2018
         </spam>
-        <div id="applyBtn" class="btn">
-            Apply Now
-        </div>
+        <a id="applyBtnLink" href="https://spmdrexel.typeform.com/to/VKJxZ0" target="_blank">
+            <div id="applyBtn" class="btn">
+                Apply Now
+            </div>
+        </a>
     </div>
     <div id="downArrow" onclick="Stock.Home.scrollTo('#about');">
         <img src="~/Content/images/Arrow.png" />
@@ -39,15 +41,16 @@
     @Html.Partial("SponsorsPartial", Model.Sponsors)
 </div>
 
+<div class="sec" id="challenge">
+    @Html.Partial("ChallengePartial")
+</div>
+
 <div class="sec" id="faq">
     @Html.Partial("FAQPartial", Model.Questions)
 </div>
 
-<div class="sec" id="contact">
-    @Html.Partial("ContactPartial")
-</div>
 <div id="footer">
-    <img id="footerLogo" src="~/Content/images/Logo_200.png" />
+    @Html.Partial("FooterPartial")
 </div>
 
 

@@ -1,17 +1,33 @@
-﻿@model List<StockPitchMadness.Models.Question>
+﻿@model Dictionary<string, List<StockPitchMadness.Models.Question>>
 
 <div>
-    <div class="row">
-        @foreach (var question in Model)
+    @foreach (var category in Model.Keys)
+    {
+        if (!string.IsNullOrEmpty(category))
         {
-            <div class="col-md-6 questionContainer">
-                <span class="questionTxt">
-                    @question.Q
-                </span>
-                <span class="answerTxt">
-                    @question.A
-                </span>
+            <div class="catTitle">
+                @category
             </div>
         }
-    </div>
+        <div class="questionCategory row">
+            @{
+                int i = 0;
+            }
+            @foreach (var question in Model[category])
+            {
+                if (i % 2 == 0)
+                {
+                   <div class="clearfix"></div> 
+                }
+                <div class="col-md-6 questionContainer">
+                    <span class="questionTxt">
+                        @question.Q
+                    </span>
+                    <span style="white-space: pre-line" class="answerTxt">@question.A</span>
+                </div>
+
+                i++;
+            }
+        </div>
+    }
 </div>

@@ -69,12 +69,25 @@ html {
   height: 100%;
   padding: 0;
 }
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
 .navbar {
   background-color: #14294f;
   border: 0;
 }
 .navbar #navContainer {
   position: relative;
+}
+@media (min-width: 767px) {
+  .navbar #navContainer {
+    padding-right: 100px !important;
+  }
 }
 .navbar .nav-link {
   color: #fff !important;
@@ -118,7 +131,7 @@ html {
 }
 @media (min-width: 991px) {
   .navbar .navbar-collapse {
-    padding-left: 125px;
+    padding-left: 80px;
   }
 }
 .navbar .navbar-brand {
@@ -130,9 +143,8 @@ html {
   z-index: 100;
 }
 .navbar #brandLinkContainer {
-  width: 130px;
+  width: 80px;
   position: absolute;
-  margin-left: 50px;
   margin-top: 10px;
   height: 50px;
 }
@@ -148,7 +160,7 @@ html {
   position: absolute;
   display: inline-block;
   top: 12px;
-  right: 10px;
+  right: 50px;
   padding: inherit;
 }
 .navbar #socialIconContainer .group {
@@ -261,6 +273,12 @@ html {
 #homeImage #applyBtn {
   margin-top: 40px;
 }
+#homeImage #applyBtnLink:hover,
+#homeImage #applyBtnLink:active,
+#homeImage #applyBtnLink:visited,
+#homeImage #applyBtnLink:focus {
+  text-decoration: none;
+}
 #homeImage #downArrow {
   position: absolute;
   bottom: 5%;
@@ -309,13 +327,14 @@ html {
 }
 #about .aboutContent {
   display: inline-block;
-  text-align: justify;
+  text-align: left;
   color: #000;
   font-size: 1.5em;
   text-indent: 50px;
 }
 #speakers {
   background-color: #f7c811;
+  min-height: 400px;
 }
 #speakers .speakerCol {
   position: relative;
@@ -404,6 +423,22 @@ html {
 }
 #sponsors {
   background-color: #fff;
+  font-size: 1.4em;
+  color: #000;
+}
+#sponsors .secTitle {
+  font-size: 1.8em;
+}
+#sponsors #sponsorsHead {
+  padding-bottom: 30px;
+}
+#sponsors #sponsorsInfo1 {
+  text-align: left;
+}
+#sponsors h3 {
+  font-family: Roboto-Bold;
+  font-style: normal;
+  font-weight: normal;
 }
 #sponsors .sponsor {
   margin-bottom: 20px;
@@ -415,17 +450,43 @@ html {
 #sponsors .sponsor img:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+#challenge {
+  background-color: #f7c811;
+  color: #000;
+  min-height: 400px;
+}
 #faq {
   background-color: #28519c;
   color: #fff;
   transition: all 1s;
+  /*.row {
+        -moz-column-width: 30em;
+        -webkit-column-width: 30em;
+        column-width: 30em;
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 2em;
+    }
+
+    .row > div {
+        display: inline-block;
+        padding: .5rem;
+        width: 100%;
+    } */
 }
 #faq .secTitle {
   color: #fff;
 }
+#faq .catTitle {
+  padding-bottom: 10px;
+  font-size: 2em;
+  font-family: Roboto-Bold;
+  font-style: normal;
+  font-weight: normal;
+}
 #faq .questionTxt {
   display: block;
-  text-align: left;
+  text-align: center;
   font-size: 1.6em;
   font-family: Roboto-Bold;
   font-style: normal;
@@ -433,32 +494,19 @@ html {
 }
 #faq .answerTxt {
   display: block;
-  text-align: left;
   font-size: 1.4em;
-  text-indent: 50px;
   font-family: Roboto-Regular;
   font-style: normal;
   font-weight: normal;
-  text-align: justify;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 15px;
 }
 #faq .questionContainer {
   margin-bottom: 50px;
   padding-right: 20px;
   display: inline-block;
   break-inside: avoid-column;
-}
-#faq .row {
-  -moz-column-width: 30em;
-  -webkit-column-width: 30em;
-  column-width: 30em;
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-  column-gap: 1em;
-}
-#faq .row > div {
-  display: inline-block;
-  padding: .5rem;
-  width: 100%;
 }
 #contact {
   background-color: #fff;
@@ -479,6 +527,14 @@ html {
   font-family: Roboto-Regular;
   font-style: normal;
   font-weight: normal;
+  color: #000;
+}
+.sec h1 {
+  font-family: Roboto-Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #000;
 }
 .sec .secTitle {
   color: #000;
@@ -491,10 +547,25 @@ html {
 }
 #footer {
   background-color: #14294f;
-  height: 200px;
+  text-align: center;
 }
-#footer #footerLogo {
-  height: 100px;
-  margin-top: 40px;
-  margin-left: 100px;
+#footer a {
+  padding-top: 5px;
+  color: #fff;
+  font-family: Roboto-Regular;
+  font-style: normal;
+  font-weight: normal;
+  display: block;
+}
+#footer #mapContainer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#footer #map {
+  height: 160px;
+}
+#footer .footerLogo {
+  max-height: 100px;
+  max-width: 100%;
+  margin-top: 30px;
 }

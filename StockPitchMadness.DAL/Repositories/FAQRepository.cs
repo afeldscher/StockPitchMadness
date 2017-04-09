@@ -20,7 +20,7 @@ namespace StockPitchMadness.DAL.Repositories
             }
         }
 
-        public static List<Question> Get(int start, int quantity = -1)
+        public static Dictionary<string, List<Question>> Get(int start, int quantity = -1)
         {
             string filePath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\FAQ.json";
 
@@ -31,10 +31,12 @@ namespace StockPitchMadness.DAL.Repositories
 
                 quantity = quantity == -1 ? qs.Count : quantity;
 
+
                 return qs
                         .Skip(start)
                         .Take(quantity)
-                        .ToList();
+                        .GroupBy(x => x.Category)
+                        .ToDictionary(x => x.Key, x => x.ToList());
             }
         }
     }

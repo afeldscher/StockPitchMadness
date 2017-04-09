@@ -10,5 +10,6 @@ namespace StockPitchMadness.Models
     {
         public string Q { get; set; }
         public string A { get; set; }
+        public string Category { get; set; }
     }
 }

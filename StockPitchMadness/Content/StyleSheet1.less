@@ -83,9 +83,6 @@
 
 
 
-
-
-
 body, html {
     height: 100%;
 }
@@ -96,12 +93,27 @@ body, html {
 }
 
 
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
 .navbar {
     background-color: @darkBlue;
     border: 0;
 
     #navContainer {
         position: relative;
+
+        @media (min-width: 767px) {
+            padding-right: 100px !important;
+        }
     }
 
     .nav-link {
@@ -155,7 +167,7 @@ body, html {
         //display: inline-block !important;
         //font-size: 1.1em;
         @media (min-width: 991px) { //767
-            padding-left: 125px;
+            padding-left: 80px;
         }
     }
 
@@ -170,9 +182,9 @@ body, html {
 
 
     #brandLinkContainer {
-        width: 130px;
+        width: 80px;
         position: absolute;
-        margin-left: 50px;
+        //margin-left: 50px;
         margin-top: 10px;
         height: 50px;
 
@@ -192,7 +204,7 @@ body, html {
         position: absolute;
         display: inline-block;
         top: 12px;
-        right: 10px;
+        right: 50px;
         padding: inherit;
 
         .group {
@@ -327,6 +339,12 @@ body, html {
         margin-top: 40px;
     }
 
+    #applyBtnLink {
+        &:hover, &:active, &:visited, &:focus {
+            text-decoration: none;
+        }
+    }
+
     #downArrow {
         position: absolute;
         bottom: 5%;
@@ -378,7 +396,7 @@ body, html {
 
     .aboutContent {
         display: inline-block;
-        text-align: justify;
+        text-align: left;
         color: #000;
         font-size: 1.5em;
         text-indent: 50px;
@@ -387,6 +405,7 @@ body, html {
 
 #speakers {
     background-color: @yellow;
+    min-height: 400px;
 
     .speakerCol {
         position: relative;
@@ -402,7 +421,6 @@ body, html {
         max-width: 412px;
 
         .speakerImage {
-            //margin-left: 90px;
             height: 120px;
             position: relative;
         }
@@ -477,6 +495,24 @@ body, html {
 
 #sponsors {
     background-color: @white;
+    font-size: 1.4em;
+    color: #000;
+
+    .secTitle {
+        font-size: 1.8em;
+    }
+
+    #sponsorsHead {
+        padding-bottom: 30px;
+    }
+
+    #sponsorsInfo1 {
+        text-align: left;
+    }
+
+    h3 {
+        .Roboto-Bold;
+    }
 
     .sponsor {
         margin-bottom: 20px;
@@ -492,6 +528,13 @@ body, html {
     }
 }
 
+
+#challenge {
+    background-color: @yellow;
+    color: #000;
+    min-height: 400px;
+}
+
 #faq {
     background-color: @lightBlue;
     color: @white;
@@ -501,9 +544,15 @@ body, html {
         color: #fff;
     }
 
+    .catTitle {
+        padding-bottom: 10px;
+        font-size: 2em;
+        .Roboto-Bold;
+    }
+
     .questionTxt {
         display: block;
-        text-align: left;
+        text-align: center;
         font-size: 1.6em;
         .Roboto-Bold;
     }
@@ -512,9 +561,10 @@ body, html {
         display: block;
         text-align: left;
         font-size: 1.4em;
-        text-indent: 50px;
         .Roboto-Regular;
-        text-align: justify;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 15px;
     }
 
     .questionContainer {
@@ -523,22 +573,20 @@ body, html {
         display: inline-block;
         break-inside: avoid-column;
     }
-
-
-    .row {
+    /*.row {
         -moz-column-width: 30em;
         -webkit-column-width: 30em;
         column-width: 30em;
-        -moz-column-gap: 1em;
-        -webkit-column-gap: 1em;
-        column-gap: 1em;
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 2em;
     }
 
     .row > div {
         display: inline-block;
         padding: .5rem;
         width: 100%;
-    }
+    } */
 }
 
 #contact {
@@ -562,6 +610,14 @@ body, html {
     padding-top: 50px;
     padding-bottom: 50px;
     .Roboto-Regular;
+    color: #000;
+
+
+    h1 {
+        .Roboto-Bold;
+        font-size: 30px;
+        color: #000;
+    }
 
     .secTitle {
         color: #000;
@@ -575,11 +631,28 @@ body, html {
 
 #footer {
     background-color: @darkBlue;
-    height: 200px;
+    text-align: center;
 
-    #footerLogo {
-        height: 100px;
-        margin-top: 40px;
-        margin-left: 100px;
+    a {
+        padding-top: 5px;
+        color: @white;
+        .Roboto-Regular;
+        display:block;
+    }
+
+    #mapContainer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #map {
+        height: 160px;
+        //max-width: 400px;
+    }
+
+    .footerLogo {
+        max-height: 100px;
+        max-width: 100%;
+        margin-top: 30px;
     }
 }
