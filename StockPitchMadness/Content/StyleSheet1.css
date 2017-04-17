@@ -333,10 +333,9 @@ html {
 }
 #about .aboutContent {
   display: inline-block;
-  text-align: left;
+  text-align: justify;
   color: #000;
   font-size: 1.5em;
-  text-indent: 50px;
 }
 #speakers {
   background-color: #f7c811;
@@ -391,7 +390,7 @@ html {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.3s;
 }
 #schedule .scheduleRow.in-view {
   opacity: 1;
@@ -443,7 +442,7 @@ html {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.7s;
 }
 .animate-Zoom.animation-element.in-view {
   opacity: 1;
@@ -461,7 +460,7 @@ html {
   padding-bottom: 30px;
 }
 #sponsors #sponsorsInfo1 {
-  text-align: left;
+  text-align: justify;
 }
 #sponsors h3 {
   font-family: Roboto-Bold;
@@ -484,7 +483,7 @@ html {
   min-height: 400px;
 }
 #challenge p {
-  text-align: left;
+  text-align: justify;
   font-family: Roboto-Regular;
   font-style: normal;
   font-weight: normal;
@@ -536,11 +535,11 @@ html {
 }
 #faq .answerTxt {
   display: block;
+  text-align: justify;
   font-size: 1.4em;
   font-family: Roboto-Regular;
   font-style: normal;
   font-weight: normal;
-  text-align: left;
   padding-left: 10px;
   padding-right: 15px;
 }
@@ -563,8 +562,8 @@ html {
   border-color: #f6f5f4;
 }
 .sec {
-  opacity: 0.2;
-  transition: all ease-in-out 0.3s;
+  opacity: 0.5;
+  transition: all ease-in-out 0.4s;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -594,7 +593,13 @@ html {
 }
 #footer {
   background-color: #14294f;
-  text-align: center;
+  text-align: left;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  #footer {
+    text-align: center;
+  }
 }
 #footer a {
   padding-top: 5px;
@@ -603,6 +608,10 @@ html {
   font-style: normal;
   font-weight: normal;
   display: block;
+}
+#footer p {
+  text-align: center;
+  padding-top: 10px;
 }
 #footer #mapContainer {
   padding-top: 30px;
@@ -621,7 +630,4 @@ html {
 #footer .footerImgContainer {
   margin-top: 40px;
   max-width: 250px;
-}
-#footer #lebowLogo {
-  margin-top: 40px;
 }

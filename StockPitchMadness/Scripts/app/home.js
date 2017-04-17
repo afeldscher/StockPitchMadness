@@ -13,6 +13,7 @@ var Stock;
                 _this.navToggleAnimation();
                 _this.pageAnimations();
                 $("#viewMoreFAQ").click(function () { _this.viewMoreFAQ(); });
+                $(window).scroll();
             });
         };
         Home.prototype.mobileMenuHide = function () {
@@ -53,13 +54,13 @@ var Stock;
                     _this.faqLoaded = true;
                     _this.faqData = $(data).hide();
                     $('.questionsContainer').append(_this.faqData);
-                    _this.faqData.slideDown(600);
+                    _this.faqData.slideDown(600, function () { $(window).scroll(); });
                     $('#viewMoreFAQ').html("View Less");
                     Home.$animation_elements = $('.animation-element');
                 });
             }
             else {
-                _this.faqData.slideDown(600);
+                _this.faqData.slideDown(600, function () { $(window).scroll(); });
                 this.faqOpened = true;
                 $('#viewMoreFAQ').html("View Less");
                 Home.$animation_elements = $('.animation-element');
@@ -105,15 +106,14 @@ var Stock;
                     if ((element_bottom_position * .95 >= window_top_position) &&
                         (element_top_position <= window_bottom_position)) {
                         $element.addClass('in-view');
-                    }
-                    else {
+                    } /*else {
                         $element.removeClass('in-view');
-                    }
+                    }*/
                 });
             }
         };
         return Home;
-    }());
+    })();
     Stock.Home = Home;
 })(Stock || (Stock = {}));
 //# sourceMappingURL=home.js.map

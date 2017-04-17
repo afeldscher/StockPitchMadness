@@ -401,10 +401,9 @@ body, html {
 
     .aboutContent {
         display: inline-block;
-        text-align: left;
+        text-align: justify;
         color: #000;
         font-size: 1.5em;
-        text-indent: 50px;
     }
 }
 
@@ -461,7 +460,7 @@ body, html {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8);
-        transition: all ease-in-out 0.2s;
+        transition: all ease-in-out 0.3s;
 
 
         &.in-view {
@@ -518,7 +517,7 @@ body, html {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8);
-        transition: all ease-in-out 0.2s;
+        transition: all ease-in-out 0.7s;
 
         &.in-view {
             opacity: 1;
@@ -542,7 +541,7 @@ body, html {
     }
 
     #sponsorsInfo1 {
-        text-align: left;
+        text-align: justify;
     }
 
     h3 {
@@ -569,7 +568,7 @@ body, html {
     min-height: 400px;
 
     p {
-        text-align: left;
+        text-align: justify;
         .Roboto-Regular;
         font-size: 1.4em;
         color: #000;
@@ -605,10 +604,9 @@ body, html {
 
     .answerTxt {
         display: block;
-        text-align: left;
+        text-align: justify;
         font-size: 1.4em;
         .Roboto-Regular;
-        text-align: left;
         padding-left: 10px;
         padding-right: 15px;
     }
@@ -652,8 +650,8 @@ body, html {
 
 
 .sec {
-    opacity: 0.2;
-    transition: all ease-in-out 0.3s;
+    opacity: 0.5;
+    transition: all ease-in-out 0.4s;
 
     &.in-view {
         opacity: 1;
@@ -684,13 +682,24 @@ body, html {
 
 #footer {
     background-color: @darkBlue;
-    text-align: center;
+    text-align: left;
+
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+
+    color: @white;
 
     a {
         padding-top: 5px;
         color: @white;
         .Roboto-Regular;
         display: block;
+    }
+
+    p {
+        text-align: center;
+        padding-top: 10px;
     }
 
     #mapContainer {
@@ -719,7 +728,7 @@ body, html {
     }
 
     #lebowLogo {
-        margin-top: 40px;
+        //margin-top: 10px;
         //max-width: 250px;
     }
 }

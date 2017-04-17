@@ -17,6 +17,7 @@ namespace Stock {
                 this.navToggleAnimation();
                 this.pageAnimations();
                 $("#viewMoreFAQ").click(() => { this.viewMoreFAQ(); });
+                $(window).scroll();
             });
         }
 
@@ -53,7 +54,6 @@ namespace Stock {
 
         public viewMoreFAQ() {
             var _this = this;
-
             if (this.faqOpened) { //close
                 _this.faqData.slideUp(600);
                 this.faqOpened = false;
@@ -70,13 +70,13 @@ namespace Stock {
 
                     _this.faqData = $(data).hide();
                     $('.questionsContainer').append(_this.faqData);
-                    _this.faqData.slideDown(600);
+                    _this.faqData.slideDown(600, () => { $(window).scroll(); });
                     $('#viewMoreFAQ').html("View Less");
                     Home.$animation_elements = $('.animation-element');
 
                 });
             } else { //loaded and closed
-                _this.faqData.slideDown(600);
+                _this.faqData.slideDown(600, () => { $(window).scroll(); });
                 this.faqOpened = true;
                 $('#viewMoreFAQ').html("View Less");
                 Home.$animation_elements = $('.animation-element');
@@ -131,9 +131,9 @@ namespace Stock {
                     if ((element_bottom_position * .95 >= window_top_position) &&
                         (element_top_position <= window_bottom_position)) {
                         $element.addClass('in-view');
-                    } else {
+                    } /*else {
                         $element.removeClass('in-view');
-                    }
+                    }*/
                 });
             }
 

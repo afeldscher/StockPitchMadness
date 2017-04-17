@@ -209,6 +209,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="manifest.json" />
+    <Content Include="Content\Sponsorship Document.pdf" />
+    <Content Include="Content\Sponsorship Guide.pdf" />
     <None Include="Properties\PublishProfiles\myasp.net.pubxml">
       <SubType>Designer</SubType>
     </None>
