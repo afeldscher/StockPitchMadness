@@ -113,7 +113,7 @@ var Stock;
             }
         };
         return Home;
-    })();
+    }());
     Stock.Home = Home;
 })(Stock || (Stock = {}));
 //# sourceMappingURL=home.js.map
