@@ -9,6 +9,8 @@ namespace StockPitchMadness.Controllers
     public class HomeController : Controller
     {
         private const int NUM_FAQ = 4;
+
+        [OutputCache(Duration = 86400, VaryByParam = "none")] //1 day
         public ActionResult Index()
         {
             return View(new Home()
@@ -20,6 +22,7 @@ namespace StockPitchMadness.Controllers
             });
         }
 
+        [OutputCache(Duration = 86400, VaryByParam = "none")]  //1 day
         public ActionResult RestQuestions()
         {
             return PartialView("QuestionsPartial", FAQRepository.Get(NUM_FAQ));
