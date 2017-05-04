@@ -211,6 +211,14 @@
     <Content Include="manifest.json" />
     <Content Include="Content\Sponsorship Document.pdf" />
     <Content Include="Content\Sponsorship Guide.pdf" />
+    <Content Include="fonts\TypoPRO-Montserrat-Bold.woff" />
+    <Content Include="fonts\TypoPRO-Montserrat-Medium.woff" />
+    <Content Include="fonts\TypoPRO-Montserrat-Regular.woff" />
+    <Content Include="fonts\TypoPRO-Montserrat-SemiBold.woff" />
+    <Content Include="fonts\TypoPRO-Roboto-Bold.woff" />
+    <Content Include="fonts\TypoPRO-Roboto-BoldItalic.woff" />
+    <Content Include="fonts\TypoPRO-Roboto-Italic.woff" />
+    <Content Include="fonts\TypoPRO-Roboto-Regular.woff" />
     <None Include="Properties\PublishProfiles\myasp.net.pubxml">
       <SubType>Designer</SubType>
     </None>
