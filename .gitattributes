@@ -5,7 +5,7 @@
 
 #fix github display language
 * linguist-vendored
-*.cshtml linguist-vendored=false
+*.cs linguist-vendored=false
 
 ###############################################################################
 # Set default behavior for command prompt diff.
